@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Implements hook_menu()
+ */
+function pikachoose_slider_menu() {
+  $items = array();
+  return $items;
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function pikachoose_slider_views_api() {
+  return array(
+      'api' => 3.0,
+  );
+}
+
+/**
+ * Implements hook_theme()
+ */
+function pikachoose_slider_theme() {
+  return array(
+      'pikachoose_slider' => array(
+          'variables' => array('form' => NULL),
+      ),
+  );
+}
+
+/**
+ * @param $variables
+ */
+function template_preprocess_pikachoose_slider(&$variables) {
+  // @todo - external library
+  // load js
+  $path = drupal_get_path('module', 'pikachoose_slider');
+  drupal_add_js($path . '/js/slippry.min.js');
+  drupal_add_css($path . '/css/slippry.css');
+
+  $view = $variables['view'];
+
+  $id = 'pikachoose-' . str_replace('_', '-', $view->name);
+
+  $options = $variables['options'];
+
+  $script = '(function($){ $(document).ready(function(){ demo1 = $("#' . $id . '").slippry({transition: "' . $options['transition'] . '", speed: ' . $options['speed'] . ', pause: ' . $options['pause'] . ', auto: ' . $options['auto'] . ', pager: ' . $options['pager'] . ', preload: "' . $options['preload'] . '", captions: ' . $options['captions'] . ', adaptiveHeight: ' . $options['adaptiveHeight'] . ' });
+  }); })(jQuery);';
+  drupal_add_js($script, array('type' => 'inline'));
+
+  $variables['pikachoose_attributes'] = array(
+      'id' => $id,
+      'class' => array('pikachoose-slider', 'pikachoose'),
+  );
+}

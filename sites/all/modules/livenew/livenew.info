@@ -1,0 +1,5 @@
+name = "Live New Custom Module"
+description = "An image/file uploader and browser supporting personal directories and user quota."
+core = "7.x"
+package = "Live New"
+

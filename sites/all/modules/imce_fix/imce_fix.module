@@ -1,0 +1,8 @@
+<?php
+function imce_fix_admin_paths() {
+    $paths = array(
+        'imce' => TRUE,
+          );
+      return $paths;
+}
+?>

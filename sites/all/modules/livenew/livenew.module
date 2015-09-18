@@ -1,0 +1,30 @@
+<?php
+/*
+ * Location Geo-code grabber presave hook
+ */
+function livenew_node_presave($node) {
+    global $bypass_location_presave;
+    
+    if (isset($node->locations)) {    
+        $location = $node->locations[0];
+        
+        $address = $location['street'].' '.$location['city'].' '.$location['province'].' '.$location['postal_code'].' '.$location['country'];
+        $address = urlencode($address);
+    
+        $requesturl = 'http://maps.googleapis.com/maps/api/geocode/json?address='.$address.'&sensor=true';
+
+        $return = drupal_http_request($requesturl);
+    
+        $data = json_decode($return->data);
+    
+        if ($data->results[0]) {        
+            $location['latitude'] = round($data->results[0]->geometry->location->lat,6);
+            $location['longitude'] = round($data->results[0]->geometry->location->lng,6);
+            $location['source'] = 3;
+            $location['inhibit_geocode'] = TRUE;
+            $node->locations[0] = $location;
+            return $node;        
+        }    
+    }
+}  
+?>
