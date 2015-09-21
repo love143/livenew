@@ -29,6 +29,7 @@
         $tmp = $flr->_field_data['tid']['entity'];
         $image = file_create_url($tmp->field_image['und'][0]['uri']);
         $url = drupal_lookup_path('alias', 'taxonomy/term/' . $tmp->tid);
+        $url = "/" . $url;
         $area = taxonomy_term_load($tmp->field_square_foot['und'][0]['tid']);
         $lvl = taxonomy_term_load($tmp->field_levels['und'][0]['tid']);
         $gar = taxonomy_term_load($tmp->field_garage['und'][0]['tid']);

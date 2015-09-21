@@ -8,30 +8,36 @@
             JOIN field_data_field_community c ON n.nid = c.entity_id AND c.entity_type = 'node'
             JOIN field_data_field_price p ON n.nid = p.entity_id AND p.entity_type = 'node'
             WHERE c.field_community_tid = $term->tid")->fetchObject();
-            dpm($content);
             print($messages);
 ?>
 <article class="<?php print $classes; ?> clearfix" id="community-override">
   <div class="container nmrg">
     <div class="row nmrg">
       <div class="span4 nmrg">
-        <h2 class='pri-title'><?php echo $term_name; ?></h2>
-        <h5 class="sec-title">Priced From&nbsp;<?php echo '$'.$price_range->min; ?>&nbsp;-&nbsp;<?php echo '$'.$price_range->max; ?></h5>
+        <h5 class="sec-title">Priced From, &nbsp;<?php echo '$'.$price_range->min; ?>&nbsp;-&nbsp;<?php echo '$'.$price_range->max; ?></h5>
         <?php echo render($content['description']); ?>
         <div id="split-tabs">
           <label class="tabs" href="tab1">Floor Plans & Details</label>
           <label class="tabs" href="tab2">Community Features</label>
-          <label class="tabs" href="tab3">Explore the Neighbourhood</label>
           <label class="tabs" href="tab4">Sales Office & Direction</label>
           <label class="tabs" href="tab5">Available Properties</label>
+          <label class="tabs" href="tab3">Explore the Neighbourhood</label>
         </div>
       </div>
       <div class="span8 nmrg">
         <div class="split-tabs" id="tab1"><h2>Floor Plans &  Details</h2><?php echo views_embed_view('floor_plans', 'communities_floor_plans', $term->tid); ?></div>
         <div class="split-tabs" id="tab2"><h2>Community Features</h2>
-          <?php
-            echo views_embed_view('communities_gallery', 'block', $term->tid);
-          ?>
+  <?php $floorFeatures = $content['field_community_features']['#items']; ?>
+  <?php if (!empty($floorFeatures)): ?>
+    <div class="span8 taxonomy-term-features">
+      <?php foreach ($floorFeatures as $feature) { ?>
+        <?php $img = (array) file_load($feature['item']['fid']); ?>
+        <div class="span3 text-center">
+          <img src="<?php print file_create_url($img['uri']); ?>" title="<?php print $img['title']; ?>" />
+        </div>
+      <?php } ?>
+    </div>
+  <?php endif; ?>
         </div>
         <div class="split-tabs" id="tab3"><h2>Explore the Neighbourhood</h2><?php echo views_embed_view('communities_map', 'community_map_block', $term->tid); ?></div>
         <div class="split-tabs" id="tab4">
@@ -76,4 +82,5 @@ drupal_add_js("
   });
 })(jQuery);
 ", "inline");
+drupal_add_js(drupal_get_path('theme', 'realia') . '/js/jquery.touchswipe.min.js', array('type' => 'file', 'scope' => 'footer'));
 ?>

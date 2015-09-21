@@ -4570,31 +4570,50 @@ article.taxonomy-term {
 #pikachoose-communities-gallery .mediabox-display-image.content .field-items > .field-item {
   text-align: center !important; }
 
-/* line 852, ../scss/_default.scss */
+/* line 854, ../scss/_default.scss */
+.view-content > .row > .span12 > .span6:nth-child(2n+1) {
+  margin-left: 0px; }
+/* line 857, ../scss/_default.scss */
+.view-content > .row > .span12 > .span4:nth-child(3n+1) {
+  margin-left: 0px; }
+/* line 860, ../scss/_default.scss */
+.view-content > .row > .span12 > .span3:nth-child(4n+1) {
+  margin-left: 0px; }
+/* line 863, ../scss/_default.scss */
+.view-content > .row > .span12 > .span2:nth-child(6n+1) {
+  margin-left: 0px; }
+/* line 868, ../scss/_default.scss */
+.view-content > .row > .span9 > .span3:nth-child(3n+1) {
+  margin-left: 0px; }
+/* line 871, ../scss/_default.scss */
+.view-content > .row > .span9 > .span2:nth-child(4n+1) {
+  margin-left: 0px; }
+
+/* line 876, ../scss/_default.scss */
 #community-override {
   padding: 0px; }
-  /* line 854, ../scss/_default.scss */
+  /* line 878, ../scss/_default.scss */
   #community-override .nmrg {
     margin: 0px; }
-  /* line 857, ../scss/_default.scss */
+  /* line 881, ../scss/_default.scss */
   #community-override h2 {
     margin-top: 0px; }
-  /* line 861, ../scss/_default.scss */
+  /* line 885, ../scss/_default.scss */
   #community-override .row > [class^=span]:first-child {
     margin-left: 0px; }
-  /* line 866, ../scss/_default.scss */
+  /* line 890, ../scss/_default.scss */
   #community-override > .container > .row > .span4 {
     background: #f0f0f0;
     padding: 15px 0px 15px 30px;
     box-shadow: inset -1px 0px 1px 0px #d5d5d5; }
-    /* line 869, ../scss/_default.scss */
+    /* line 893, ../scss/_default.scss */
     #community-override > .container > .row > .span4 > * {
       padding-right: 15px; }
-    /* line 872, ../scss/_default.scss */
+    /* line 896, ../scss/_default.scss */
     #community-override > .container > .row > .span4 #split-tabs {
       padding-right: 0px;
       border-bottom: 1px solid #65A700; }
-      /* line 874, ../scss/_default.scss */
+      /* line 898, ../scss/_default.scss */
       #community-override > .container > .row > .span4 #split-tabs .tabs {
         height: 35px;
         line-height: 35px;
@@ -4602,7 +4621,7 @@ article.taxonomy-term {
         background-color: #65A700;
         color: #FFFFFF;
         margin: 0px; }
-        /* line 876, ../scss/_default.scss */
+        /* line 900, ../scss/_default.scss */
         #community-override > .container > .row > .span4 #split-tabs .tabs.active, #community-override > .container > .row > .span4 #split-tabs .tabs:hover {
           background-color: #FFFFFF;
           color: #65A700;
@@ -4617,55 +4636,94 @@ article.taxonomy-term {
           transition: padding-left 0.1s ease-in;
           padding-left: 18px;
           box-shadow: inset 1px 1px 1px 0px #65A700; }
-  /* line 884, ../scss/_default.scss */
+  /* line 909, ../scss/_default.scss */
   #community-override > .container > .row > .span8 > .split-tabs > h2 {
     margin: 10px 0px 10px 30px; }
-  /* line 888, ../scss/_default.scss */
+  /* line 914, ../scss/_default.scss */
+  #community-override > .container > .row > .span8 > .split-tabs .view-related-nodes .span9 > .span3:nth-child(3n+1) {
+    margin-left: 30px; }
+  /* line 921, ../scss/_default.scss */
   #community-override > .container > .row > .span8 .communities-content .views-field {
     padding: 15px 0px 15px 30px;
     margin: 0px; }
-  /* line 893, ../scss/_default.scss */
+  /* line 926, ../scss/_default.scss */
   #community-override > .container > .row > .span8 .row {
     margin: 0px; }
-    /* line 895, ../scss/_default.scss */
+    /* line 928, ../scss/_default.scss */
     #community-override > .container > .row > .span8 .row .span9 {
       margin: 0px; }
-      /* line 897, ../scss/_default.scss */
+      /* line 930, ../scss/_default.scss */
       #community-override > .container > .row > .span8 .row .span9 [class^="span"] {
         margin: 0px; }
 
-/* line 905, ../scss/_default.scss */
-.view-top-4 .views-field.views-field-field-image {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: #ccc; }
+/* line 942, ../scss/_default.scss */
+.listing-grid.view .view-content .row .views-field-title .field-content {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
-/* line 912, ../scss/_default.scss */
-.view-top-4 .views-field-field-image .field-content {
-  line-height: 200px;
-  text-align: center; }
-
-/* line 918, ../scss/_default.scss */
-.view-top-4 img {
-  height: 100px;
-  width: 100px; }
+/* line 952, ../scss/_default.scss */
+.view-top-4 {
+  /*  .views-field.views-field-field-image {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background-color: $gray-medium;
+      .field-content {
+        line-height: 200px;
+        text-align: center;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    }*/ }
+  /* line 954, ../scss/_default.scss */
+  .view-top-4 .span9 .span2 {
+    background-color: #707070;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px; }
+    /* line 959, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-title {
+      margin: 5px 0px;
+      text-align: left; }
+      /* line 962, ../scss/_default.scss */
+      .view-top-4 .span9 .span2 .views-field-title .field-content {
+        text-align: left; }
+    /* line 966, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-field-image {
+      border-radius: 0px;
+      width: 100%;
+      min-height: 120px;
+      height: auto; }
+      /* line 971, ../scss/_default.scss */
+      .view-top-4 .span9 .span2 .views-field-field-image .field-content {
+        line-height: initial; }
+      /* line 974, ../scss/_default.scss */
+      .view-top-4 .span9 .span2 .views-field-field-image img {
+        width: calc(100%);
+        max-width: 100%; }
+    /* line 979, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-field-web {
+      display: none; }
 
 @media screen and (max-width: 768px) {
-  /* line 924, ../scss/_default.scss */
+  /* line 1002, ../scss/_default.scss */
   article.taxonomy-term .overview {
     float: none;
     margin: 0px 0px 20px 0px; } }
 @media screen and (min-width: 769px) {
-  /* line 930, ../scss/_default.scss */
+  /* line 1008, ../scss/_default.scss */
   .taxonomy-term-features {
     width: 100%;
     margin: 0px; }
-    /* line 932, ../scss/_default.scss */
+    /* line 1010, ../scss/_default.scss */
     .taxonomy-term-features .span2 {
       max-height: 150px;
       min-height: 70px;
       overflow: hidden; }
-      /* line 934, ../scss/_default.scss */
+      /* line 1012, ../scss/_default.scss */
       .taxonomy-term-features .span2:nth-child(4n+1) {
         margin-left: 0px; } }
