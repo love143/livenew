@@ -18,7 +18,7 @@ textarea, input[type=text], input[type=password], input[type=email] {
   -webkit-box-shadow: none;
   box-shadow: none;
   background-image: none;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #d5d5d5;
   color: #707070;
   margin: 0px;
   padding: 6px; }
@@ -27,7 +27,7 @@ textarea, input[type=text], input[type=password], input[type=email] {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border: 1px solid #b5b5b5;
+    border: 1px solid #d5d5d5;
     outline: 0px; }
 
 /* line 13, ../scss/_forms.scss */
@@ -586,7 +586,7 @@ button.form-submit {
       -moz-border-radius: 1px;
       -webkit-border-radius: 1px;
       border-radius: 1px;
-      border: 1px solid #b5b5b5;
+      border: 1px solid #d5d5d5;
       float: left;
       margin-bottom: 10px;
       margin-right: 10px; }
@@ -732,7 +732,7 @@ button.form-submit {
       -moz-border-radius: 1px;
       -webkit-border-radius: 1px;
       border-radius: 1px;
-      border: 1px solid #b5b5b5;
+      border: 1px solid #d5d5d5;
       float: left;
       margin-bottom: 10px;
       margin-right: 9px; }
@@ -788,7 +788,7 @@ button.form-submit {
       -moz-border-radius: 1px;
       -webkit-border-radius: 1px;
       border-radius: 1px;
-      border: 1px solid #b5b5b5;
+      border: 1px solid #d5d5d5;
       float: left;
       margin-bottom: 10px;
       margin-right: 10px; }
@@ -993,7 +993,7 @@ body.nav-open #aviators-palette {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 13px 13px;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #d5d5d5;
   border-left: 0px;
   display: inline-block;
   margin: 0px 0px 0px -5px;
@@ -1472,7 +1472,7 @@ body.nav-open #aviators-palette {
   padding: 20px; }
   /* line 3, ../scss/_filters.scss */
   .block-filter.livewell-events-box {
-    background-color: #b5b5b5; }
+    background-color: #d5d5d5; }
   /* line 7, ../scss/_filters.scss */
   .block-filter .title .block-title {
     color: #fff;
@@ -1517,7 +1517,7 @@ body.nav-open #aviators-palette {
             width: 100%; }
           /* line 27, ../scss/_filters.scss */
           .block-filter form .views-exposed-widgets .views-exposed-widget .form-item .chzn-search input {
-            border: 1px solid #d5d5d5; }
+            border: 1px solid #b5b5b5; }
           /* line 29, ../scss/_filters.scss */
           .block-filter form .views-exposed-widgets .views-exposed-widget .form-item.form-type-bef-checkbox {
             float: left;
@@ -1675,11 +1675,11 @@ body.nav-open #aviators-palette {
         /* line 15, ../scss/_properties.scss */
         .view-apartments .view-filters form .views-exposed-widgets .views-exposed-widget .chzn-container,
         .view-related-nodes .view-filters form .views-exposed-widgets .views-exposed-widget .chzn-container {
-          border: 1px solid #d5d5d5; }
+          border: 1px solid #b5b5b5; }
           /* line 17, ../scss/_properties.scss */
           .view-apartments .view-filters form .views-exposed-widgets .views-exposed-widget .chzn-container .chzn-drop,
           .view-related-nodes .view-filters form .views-exposed-widgets .views-exposed-widget .chzn-container .chzn-drop {
-            border: 1px solid #d5d5d5;
+            border: 1px solid #b5b5b5;
             border-top: 0px;
             margin-left: -1px;
             width: 100px !important; }
@@ -2134,7 +2134,7 @@ body.node-type-apartment article.node {
   padding: 20px; }
   /* line 4, ../scss/_propertydetail.scss */
   body.node-type-apartment article.node .overview {
-    border: 1px solid #d5d5d5;
+    border: 1px solid #b5b5b5;
     margin: 0px 30px 10px 0px;
     padding: 20px; }
     /* line 5, ../scss/_propertydetail.scss */
@@ -2723,7 +2723,7 @@ body.node-type-apartment section .block-views {
           padding: 0px; }
       /* line 18, ../scss/_header.scss */
       #header-wrapper #header #header-inner .navbar .navbar-inner .site-slogan {
-        color: #d5d5d5;
+        color: #b5b5b5;
         float: left;
         margin-top: 30px;
         margin-left: 15px; }
@@ -2798,7 +2798,7 @@ body.node-type-apartment section .block-views {
             background-position: center center;
             background-repeat: no-repeat;
             background-size: 13px 13px;
-            border: 1px solid #b5b5b5;
+            border: 1px solid #d5d5d5;
             border-left: 0px;
             display: inline-block;
             margin: 0px 0px 0px -5px;
@@ -3749,7 +3749,7 @@ ul.pager {
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 13px 13px;
-      border: 1px solid #b5b5b5;
+      border: 1px solid #d5d5d5;
       border-left: 0px;
       display: inline-block;
       margin: 0px 0px 0px -5px;
@@ -4563,7 +4563,7 @@ article.taxonomy-term {
 .comm-list.location {
   font-weight: 500;
   font-size: 18px;
-  border-bottom: 1px dashed #b5b5b5;
+  border-bottom: 1px dashed #d5d5d5;
   padding-bottom: 10px; }
 
 /* line 847, ../scss/_default.scss */
@@ -4586,7 +4586,7 @@ article.taxonomy-term {
   #community-override > .container > .row > .span4 {
     background: #f0f0f0;
     padding: 15px 0px 15px 30px;
-    box-shadow: inset -1px 0px 1px 0px #b5b5b5; }
+    box-shadow: inset -1px 0px 1px 0px #d5d5d5; }
     /* line 869, ../scss/_default.scss */
     #community-override > .container > .row > .span4 > * {
       padding-right: 15px; }
@@ -4633,43 +4633,39 @@ article.taxonomy-term {
       /* line 897, ../scss/_default.scss */
       #community-override > .container > .row > .span8 .row .span9 [class^="span"] {
         margin: 0px; }
-      /* line 900, ../scss/_default.scss */
-      #community-override > .container > .row > .span8 .row .span9 .span3 {
-        margin-left: 30px; }
+
+/* line 905, ../scss/_default.scss */
+.view-top-4 .views-field.views-field-field-image {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #ccc; }
 
 /* line 912, ../scss/_default.scss */
-.view-content .span9 .span3 .views-field-title a {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-  white-space: nowrap; }
+.view-top-4 .views-field-field-image .field-content {
+  line-height: 200px;
+  text-align: center; }
 
-/* line 923, ../scss/_default.scss */
-.span9 > .span3:nth-child(3n+1) {
-  margin-left: 0px; }
-
-/* line 928, ../scss/_default.scss */
-.span12 > .span4:nth-child(3n+1) {
-  margin-left: 0px; }
-/* line 931, ../scss/_default.scss */
-.span12 > .span3:nth-child(4n+1) {
-  margin-left: 0px; }
+/* line 918, ../scss/_default.scss */
+.view-top-4 img {
+  height: 100px;
+  width: 100px; }
 
 @media screen and (max-width: 768px) {
-  /* line 937, ../scss/_default.scss */
+  /* line 924, ../scss/_default.scss */
   article.taxonomy-term .overview {
     float: none;
     margin: 0px 0px 20px 0px; } }
 @media screen and (min-width: 769px) {
-  /* line 943, ../scss/_default.scss */
+  /* line 930, ../scss/_default.scss */
   .taxonomy-term-features {
     width: 100%;
     margin: 0px; }
-    /* line 945, ../scss/_default.scss */
+    /* line 932, ../scss/_default.scss */
     .taxonomy-term-features .span2 {
       max-height: 150px;
       min-height: 70px;
       overflow: hidden; }
-      /* line 947, ../scss/_default.scss */
+      /* line 934, ../scss/_default.scss */
       .taxonomy-term-features .span2:nth-child(4n+1) {
         margin-left: 0px; } }

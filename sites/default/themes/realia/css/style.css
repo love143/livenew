@@ -6,3 +6,27 @@
       display: inline-block;
           padding-right: 50px;
 }
+.view-top-4 .views-field.views-field-field-image {
+      height: 200px;
+          width: 200px;
+              border-radius: 50%;
+                  background-color: #ccc;
+                  margin: auto;
+}
+
+.view-top-4{
+  text-align: center;
+}
+.view-top-4 .views-field-field-image .field-content {
+      line-height: 200px;
+          text-align: center;
+              
+}
+
+.view-top-4 img{
+      height  100px;
+          width: 100px;
+}
+
+.vocabulary-communities .spirit { padding-right: 0 !important;}
+
