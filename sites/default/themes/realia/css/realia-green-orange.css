@@ -4663,67 +4663,89 @@ article.taxonomy-term {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-/* line 952, ../scss/_default.scss */
-.view-top-4 {
-  /*  .views-field.views-field-field-image {
-      height: 200px;
-      width: 200px;
-      border-radius: 50%;
-      background-color: $gray-medium;
-      .field-content {
-        line-height: 200px;
-        text-align: center;
-      }
-      img {
-        height: 100px;
-        width: 100px;
-      }
-    }*/ }
-  /* line 954, ../scss/_default.scss */
-  .view-top-4 .span9 .span2 {
-    background-color: #707070;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 8px; }
-    /* line 959, ../scss/_default.scss */
-    .view-top-4 .span9 .span2 .views-field-title {
-      margin: 5px 0px;
-      text-align: left; }
-      /* line 962, ../scss/_default.scss */
-      .view-top-4 .span9 .span2 .views-field-title .field-content {
-        text-align: left; }
-    /* line 966, ../scss/_default.scss */
-    .view-top-4 .span9 .span2 .views-field-field-image {
-      border-radius: 0px;
-      width: 100%;
-      min-height: 120px;
-      height: auto; }
-      /* line 971, ../scss/_default.scss */
-      .view-top-4 .span9 .span2 .views-field-field-image .field-content {
-        line-height: initial; }
-      /* line 974, ../scss/_default.scss */
-      .view-top-4 .span9 .span2 .views-field-field-image img {
-        width: calc(100%);
-        max-width: 100%; }
-    /* line 979, ../scss/_default.scss */
-    .view-top-4 .span9 .span2 .views-field-field-web {
-      display: none; }
+/* line 953, ../scss/_default.scss */
+.grey-background .view-content {
+  background-color: #707070 !important; }
+
+/* line 959, ../scss/_default.scss */
+.view-top-4 .span9 .span2 {
+  background-color: #65A700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px; }
+  /* line 964, ../scss/_default.scss */
+  .view-top-4 .span9 .span2 .views-field-title {
+    margin: 5px 0px;
+    text-align: left; }
+    /* line 967, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-title .field-content {
+      font-weight: bold;
+      font-size: 16px;
+      text-align: left;
+      color: #FFFFFF; }
+  /* line 974, ../scss/_default.scss */
+  .view-top-4 .span9 .span2 .views-field-field-image {
+    border-radius: 0px;
+    width: 100%;
+    min-height: 120px;
+    max-height: 160px;
+    height: auto;
+    overflow: hidden; }
+    /* line 981, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-field-image .field-content {
+      line-height: initial; }
+    /* line 984, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-field-image a {
+      display: inline-block; }
+    /* line 987, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-field-image img {
+      width: calc(100%);
+      max-width: calc(100%);
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      -ms-transition: all .2s linear;
+      transition: all .2s linear; }
+    /* line 996, ../scss/_default.scss */
+    .view-top-4 .span9 .span2 .views-field-field-image img:hover {
+      width: calc(110%);
+      max-width: calc(110%);
+      margin-left: -5%;
+      margin-top: -5%; }
+
+/* line 1006, ../scss/_default.scss */
+a#btn-nav {
+  background-color: #313131;
+  border-radius: 6px; }
 
 @media screen and (max-width: 768px) {
-  /* line 1002, ../scss/_default.scss */
+  /* line 1012, ../scss/_default.scss */
+  .jcarousel-skin-tango .jcarousel-container {
+    margin: auto !important; }
+
+  /* line 1018, ../scss/_default.scss */
+  .view-top-4 .span9 .span2 {
+    width: calc(100% - 40px);
+    margin: 10px auto !important; }
+
+  /* line 1025, ../scss/_default.scss */
   article.taxonomy-term .overview {
     float: none;
     margin: 0px 0px 20px 0px; } }
 @media screen and (min-width: 769px) {
-  /* line 1008, ../scss/_default.scss */
+  /* line 1034, ../scss/_default.scss */
+  .view-top-4 .span9 .span2 .views-field-field-image {
+    max-height: 140px; }
+
+  /* line 1040, ../scss/_default.scss */
   .taxonomy-term-features {
     width: 100%;
     margin: 0px; }
-    /* line 1010, ../scss/_default.scss */
+    /* line 1042, ../scss/_default.scss */
     .taxonomy-term-features .span2 {
       max-height: 150px;
       min-height: 70px;
       overflow: hidden; }
-      /* line 1012, ../scss/_default.scss */
+      /* line 1044, ../scss/_default.scss */
       .taxonomy-term-features .span2:nth-child(4n+1) {
         margin-left: 0px; } }
