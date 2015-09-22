@@ -949,24 +949,78 @@ article.taxonomy-term {
     }
   }
 }
+.grey-background {
+  .view-content {
+    background-color: $gray !important;
+  }
+}
 .view-top-4 {
-  .views-field.views-field-field-image {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    background-color: $gray-medium;
-    .field-content {
-      line-height: 200px;
-      text-align: center;
-    }
-    img {
-      height: 100px;
-      width: 100px;
+  .span9 {
+    .span2 {
+      background-color: $blue-medium;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 8px;
+      .views-field-title {
+        margin: 5px 0px;
+        text-align: left;
+        .field-content {
+          font-weight: bold;
+          font-size: 16px;
+          text-align: left;
+          color: $white;
+        }
+      }
+      .views-field-field-image {
+        border-radius: 0px;
+        width: 100%;
+        min-height: 120px;
+        max-height: 160px;
+        height: auto;
+        overflow: hidden;
+        .field-content {
+          line-height: initial;
+        }
+        a {
+          display: inline-block;
+        }
+        img {
+          width: calc(100%);
+          max-width: calc(100%);
+          -webkit-transition: all .2s linear;
+          -moz-transition: all .2s linear;
+          -o-transition: all .2s linear;
+          -ms-transition: all .2s linear;
+          transition: all .2s linear;
+        }
+        img:hover {
+          width: calc(110%);
+          max-width: calc(110%);
+          margin-left: -5%;
+          margin-top: -5%;
+        }
+      }
     }
   }
 }
-
+a#btn-nav {
+  background-color: $black;
+  border-radius: 6px;
+}
 @media screen and (max-width: 768px) {
+  .jcarousel-skin-tango {
+    .jcarousel-container {
+      margin: auto !important;
+    }
+  }
+  .view-top-4 {
+    .span9 {
+      .span2 {
+        width: calc(100% - 40px);
+        margin: 10px auto !important;
+      }
+    }
+  }
   article.taxonomy-term {
     .overview {
       float: none; margin: 0px 0px 20px 0px;
@@ -974,6 +1028,15 @@ article.taxonomy-term {
   }
 }
 @media screen and (min-width: 769px) {
+  .view-top-4 {
+    .span9 {
+      .span2 {
+        .views-field-field-image {
+          max-height: 140px;
+        }
+      }
+    }
+  }
   .taxonomy-term-features {
     width: 100%; margin: 0px;
     .span2 {
