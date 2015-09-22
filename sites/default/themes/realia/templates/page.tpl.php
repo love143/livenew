@@ -130,6 +130,9 @@
                 <section class="<?php print _bootstrap_content_span($columns); ?>">
 
                     <a id="main-content"></a>
+                    <?php if ($page['content_top']): ?>
+                        <?php print render($page['content_top']); ?>
+                    <?php endif; ?>
                     <?php print render($title_prefix); ?>
                     <?php if ($title): ?>
                     <h1 class="page-header"><?php print $title; ?></h1>
@@ -148,6 +151,9 @@
                     <ul class="action-links"><?php print render($action_links); ?></ul>
                     <?php endif; ?>
                     <?php print render($page['content']); ?>
+                    <?php if ($page['content_bottom']): ?>
+                        <?php print render($page['content_bottom']); ?>
+                    <?php endif; ?>
                 </section>
 
                 <?php if ($page['sidebar_second']): ?>
