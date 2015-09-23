@@ -106,7 +106,7 @@
         content: boxText,
         disableAutoPan: false,
         maxWidth: 0,
-        pixelOffset: new google.maps.Size(-145, -150),
+        pixelOffset: new google.maps.Size(-151, -140),
         zIndex: null,
         boxStyle: {
           width: "280px"

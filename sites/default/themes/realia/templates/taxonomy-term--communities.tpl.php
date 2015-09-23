@@ -20,7 +20,7 @@
           <label class="tabs" href="tab1">Floor Plans & Details</label>
           <label class="tabs" href="tab2">Community Features</label>
           <label class="tabs" href="tab4">Sales Office & Direction</label>
-          <label class="tabs" href="tab5">Available Properties</label>
+          <label class="tabs active" href="tab5">Available Properties</label>
           <label class="tabs" href="tab3">Explore the Neighbourhood</label>
         </div>
       </div>
