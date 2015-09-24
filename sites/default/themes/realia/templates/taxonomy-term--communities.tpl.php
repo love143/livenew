@@ -17,15 +17,15 @@
         <h5 class="sec-title">Priced From, &nbsp;<?php echo '$'.$price_range->min; ?>&nbsp;-&nbsp;<?php echo '$'.$price_range->max; ?></h5>
         <?php echo render($content['description']); ?>
         <div id="split-tabs">
-          <label class="tabs" href="tab1">Floor Plans & Details</label>
+          <label class="tabs active" href="tab1">Available Properties</label>
           <label class="tabs" href="tab2">Community Features</label>
           <label class="tabs" href="tab4">Sales Office & Direction</label>
-          <label class="tabs active" href="tab5">Available Properties</label>
+          <label class="tabs" href="tab5">Floor Plans & Details</label>
           <label class="tabs" href="tab3">Explore the Neighbourhood</label>
         </div>
       </div>
       <div class="span8 nmrg">
-        <div class="split-tabs" id="tab1"><h2>Floor Plans &  Details</h2><?php echo views_embed_view('floor_plans', 'communities_floor_plans', $term->tid); ?></div>
+        <div class="split-tabs" id="tab1"><h2>Available Properties</h2><br><?php echo views_embed_view('related_nodes', 'block', $term->tid); ?></div>
         <div class="split-tabs" id="tab2"><h2>Community Features</h2>
   <?php $floorFeatures = $content['field_community_features']['#items']; ?>
   <?php if (!empty($floorFeatures)): ?>
@@ -54,7 +54,7 @@
             </div>
           </div><!-- /.table -->
         </div>
-        <div class="split-tabs" id="tab5"><h2>Available Properties</h2><br><?php echo views_embed_view('related_nodes', 'block', $term->tid); ?></div>
+        <div class="split-tabs" id="tab5"><h2>Floor Plans &  Details</h2><?php echo views_embed_view('floor_plans', 'communities_floor_plans', $term->tid); ?></div>
       </div>
     </div>
   </div>
