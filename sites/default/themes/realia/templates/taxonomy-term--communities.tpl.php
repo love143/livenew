@@ -74,7 +74,7 @@ drupal_add_js("
     var gmp = setInterval(function() {
       console.log('try');
       if (gmaploadindi) {
-        $('#split-tabs .tabs:first-child').trigger('click');
+        $('#split-tabs .tabs.active').trigger('click');
         clearInterval(gmp);
         console.log('done');
       }
