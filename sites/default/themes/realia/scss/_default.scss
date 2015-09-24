@@ -280,14 +280,13 @@ ul.pager { @include border-radius(0px); @include box-shadow(none); margin-bottom
 
 
 .marker {
-  background-image: url('../img/markers/marker-blue.png'); background-position: center top; background-repeat: no-repeat; background-size: 42px 57px; cursor: pointer; height: 57px; opacity: .8; position: relative; width: 42px;
+  background-image: url('../img/markers/marker-blue.png'); background-position: center top; background-repeat: no-repeat; background-size: 30px 40px; cursor: pointer; height: 40px; opacity: .8; position: relative; width: 30px;
   @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
     background-image: url('../img/markers/marker-blue@2x.png');
   }
 
   .marker-inner {
-    background-image: url('../img/markers/icons/other.png'); background-position: 6px 5px; background-repeat: no-repeat; width: 36px; height: 36px; position: relative;
-
+    background-image: url('../img/markers/icons/other.png'); background-position: center; background-repeat: no-repeat; width: 22px; height: 22px; position: relative; background-size: contain; top: 4px; left: 4px;
   }
 
   &:hover {

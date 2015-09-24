@@ -4720,12 +4720,12 @@ ul.pager li:first-child a, ul.pager li:last-child a {
   background-image: url("../img/markers/marker-blue.png");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 42px 57px;
+  background-size: 30px 40px;
   cursor: pointer;
-  height: 57px;
+  height: 40px;
   opacity: .8;
   position: relative;
-  width: 42px;
+  width: 30px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
   /* line 282, ../scss/_default.scss */
@@ -4736,11 +4736,14 @@ ul.pager li:first-child a, ul.pager li:last-child a {
 /* line 288, ../scss/_default.scss */
 .marker .marker-inner {
   background-image: url("../img/markers/icons/other.png");
-  background-position: 6px 5px;
+  background-position: center;
   background-repeat: no-repeat;
-  width: 36px;
-  height: 36px;
+  width: 22px;
+  height: 22px;
   position: relative;
+  background-size: contain;
+  top: 4px;
+  left: 4px;
 }
 /* line 293, ../scss/_default.scss */
 .marker:hover {
