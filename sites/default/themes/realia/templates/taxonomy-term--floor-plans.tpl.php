@@ -49,5 +49,12 @@
   <?php endif; ?>
 </article>
 <?php
+drupal_add_js("
+(function($){
+  $(document).ready(function(){
+    $('.youtube-field-player').css({ height: '400px'});
+  });
+})(jQuery);
+", "inline");
 drupal_add_js(drupal_get_path('theme', 'realia') . '/js/jquery.touchswipe.min.js', array('type' => 'file', 'scope' => 'footer'));
 ?>
