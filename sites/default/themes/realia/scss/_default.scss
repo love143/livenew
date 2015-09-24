@@ -915,6 +915,14 @@ article.taxonomy-term {
             }
           }
         }
+        .taxonomy-term-features {
+          .span8 {
+            .span3 {
+              max-height: 100px;
+              overflow: hidden;
+            }
+          }
+        }
       }
       .communities-content {
         .views-field {
