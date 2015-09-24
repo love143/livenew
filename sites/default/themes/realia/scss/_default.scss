@@ -1007,6 +1007,19 @@ a#btn-nav {
   background-color: $black;
   border-radius: 6px;
 }
+
+#block-webform-client-block-196 {
+  margin-top: 10px;
+}
+
+.vocabulary-communities .tabs:not(.active) {
+  width: 75%;
+}
+
+#community-override > .container > .row > .span4 #split-tabs{
+  border-bottom: 0;
+}
+
 @media screen and (max-width: 768px) {
   .jcarousel-skin-tango {
     .jcarousel-container {
