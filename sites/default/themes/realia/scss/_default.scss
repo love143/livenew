@@ -959,6 +959,9 @@ article.taxonomy-term {
     background-color: $gray-medium !important;
   }
 }
+.field-type-taxonomy-term-reference{
+  display: none;
+}
 .view-top-4 {
   .span9 {
     .span2 {
