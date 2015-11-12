@@ -5567,6 +5567,10 @@ article.taxonomy-term .field-type-youtube {
 #pikachoose-communities-gallery .mediabox-display-image.content .field-items > .field-item {
   text-align: center !important;
 }
+/* line 846, ../scss/_default.scss */
+#pikachoose-floor-plans-gallery .mediabox-display-image.content .field-items > .field-item {
+  text-align: center !important;
+}
 
 /* line 853, ../scss/_default.scss */
 .view-content > .row > .span12 > .span6:nth-child(2n+1) {

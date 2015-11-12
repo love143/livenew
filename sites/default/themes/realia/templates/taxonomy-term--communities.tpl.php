@@ -4,17 +4,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
- $price_range = db_query("SELECT MAX(p.field_price_value) as max, MIN(p.field_price_value) as min FROM node n
+$price_range = db_query("SELECT MAX(p.field_price_value) as max, MIN(p.field_price_value) as min FROM node n
             JOIN field_data_field_community c ON n.nid = c.entity_id AND c.entity_type = 'node'
             JOIN field_data_field_price p ON n.nid = p.entity_id AND p.entity_type = 'node'
             WHERE c.field_community_tid = $term->tid")->fetchObject();
-            print($messages);
+print($messages);
 ?>
 <article class="<?php print $classes; ?> clearfix" id="community-override">
   <div class="container nmrg">
     <div class="row nmrg">
       <div class="span4 nmrg">
-        <h5 class="sec-title">Priced From, &nbsp;<?php echo '$'.$price_range->min; ?>&nbsp;-&nbsp;<?php echo '$'.$price_range->max; ?></h5>
+        <h5 class="sec-title">Priced From, &nbsp;<?php echo '$' . $price_range->min; ?>&nbsp;-&nbsp;<?php echo '$' . $price_range->max; ?></h5>
         <?php echo render($content['description']); ?>
         <div id="split-tabs">
           <label class="tabs active" href="tab1">Available Properties</label>
@@ -27,17 +27,17 @@
       <div class="span8 nmrg">
         <div class="split-tabs" id="tab1"><h2>Available Properties</h2><br><?php echo views_embed_view('related_nodes', 'block', $term->tid); ?></div>
         <div class="split-tabs" id="tab2"><h2>Community Features</h2>
-  <?php $floorFeatures = $content['field_community_features']['#items']; ?>
-  <?php if (!empty($floorFeatures)): ?>
-    <div class="span8 taxonomy-term-features">
-      <?php foreach ($floorFeatures as $feature) { ?>
-        <?php $img = (array) file_load($feature['item']['fid']); ?>
-        <div class="span3 text-center">
-          <img src="<?php print file_create_url($img['uri']); ?>" title="<?php print $img['title']; ?>" />
-        </div>
-      <?php } ?>
-    </div>
-  <?php endif; ?>
+          <?php $floorFeatures = $content['field_community_features']['#items']; ?>
+          <?php if (!empty($floorFeatures)): ?>
+            <div class="span8 taxonomy-term-features">
+              <?php foreach ($floorFeatures as $feature) { ?>
+                <?php $img = (array) file_load($feature['item']['fid']); ?>
+                <div class="span3 text-center">
+                  <img src="<?php print file_create_url($img['uri']); ?>" title="<?php print $img['title']; ?>" />
+                </div>
+              <?php } ?>
+            </div>
+          <?php endif; ?>
         </div>
         <div class="split-tabs" id="tab3"><h2>Explore the Neighbourhood</h2><?php echo views_embed_view('communities_map', 'community_map_block', $term->tid); ?></div>
         <div class="split-tabs" id="tab4">
