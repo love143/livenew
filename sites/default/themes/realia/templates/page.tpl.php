@@ -99,7 +99,7 @@
         <?php endif; ?>
         <?php $arg = arg(); ?>
         <?php if (empty($arg[0]) || (isset($arg[0]) && in_array($arg[0], array('communities', 'apartments')))): ?>
-          <div id="MyGmaps" style="width: 100%; height: 480px; border: 1px solid #CECECE;">&nbsp;</div>
+          <div id="MyGmaps" style="width: 100%;  height: 480px; border: 1px 0px 1px 0px solid rgb(206, 206, 206); position: relative; background-color: rgb(229, 227, 223); overflow: hidden;">&nbsp;</div>
         <?php endif; ?>
       </div>
 
