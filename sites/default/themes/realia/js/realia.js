@@ -19,7 +19,8 @@
     });
     //inits and creates lightbox effects for images
 
-    LoadGmaps();
+    // loaded using template.php for better control over the pages to view
+    // LoadGmaps();
 
   });
 
