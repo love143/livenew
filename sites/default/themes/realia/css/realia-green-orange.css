@@ -5296,13 +5296,16 @@ body.header-dark #header-inner .site-email a {
 .communities-content .views-field .row .span5 .bedroom, .communities-content .views-field .row .span8 .bedroom, .communities-content .views-field .row .span12 .bedroom {
   background-image: url("../img/icons/bedrooms.png");
   background-size: 21px 12px;
+  text-align: right;
+  width: 31px;
 }
 /* line 668, ../scss/_default.scss */
 .communities-content .views-field .row .span5 .bathroom, .communities-content .views-field .row .span8 .bathroom, .communities-content .views-field .row .span12 .bathroom {
   background-image: url("../img/icons/bathrooms.png");
   background-size: 14px 20px;
+  text-align: right;
+  width: 25px;
 }
-
 /* line 677, ../scss/_default.scss */
 #views-exposed-form-floor-plans-page .views-exposed-form,
 #views-exposed-form-communities-page-1 .views-exposed-form {
