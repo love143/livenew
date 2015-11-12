@@ -31,8 +31,7 @@
         $tmp = $comm->_field_data['tid']['entity'];
         $image = !empty($tmp->field_image['und'][0]['uri']) ? file_create_url($tmp->field_image['und'][0]['uri']) : false;
         $sp5 = $image ? 'span8' : 'span12';
-        $url = drupal_get_path_alias($base_url . '/taxonomy/term/' . $tmp->tid);
-        //$url = str_replace('communities/', '', $url);
+        $url = url($bsae_url . "taxonomy/term/$tmp->tid");
         drupal_set_message($url);
         $address = $tmp->field_community_address['und'][0];
         $agent = node_load($tmp->field_agent['und'][0]['nid']);
@@ -63,7 +62,7 @@
                 <?php if (!empty($agent)): ?>
                   <div class="spirit">
                     <span>Agent :&nbsp;</span>
-                    <a href="<?php echo drupal_get_path_alias("node/$agent->nid"); ?>"><?php echo $agent->title; ?></a>
+                    <a href="<?php echo url($bsae_url . "node/$agent->nid"); ?>"><?php echo $agent->title; ?></a>
                   </div>
                 <?php endif; ?>
                 <div class="spirit">
