@@ -5658,6 +5658,9 @@ article.taxonomy-term .field-type-youtube {
   box-shadow: inset 1px 1px 1px 0px #65A700;
 }
 /* line 908, ../scss/_default.scss */
+#community-override > .container > .row > .span8 > .split-tabs {
+  overflow: hidden !important;
+}
 #community-override > .container > .row > .span8 > .split-tabs > h2 {
   margin: 10px 0px 10px 30px;
 }
