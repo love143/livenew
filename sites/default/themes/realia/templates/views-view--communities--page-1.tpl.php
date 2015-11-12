@@ -30,7 +30,7 @@
         $tmp = $comm->_field_data['tid']['entity'];
         $image = !empty($tmp->field_image['und'][0]['uri']) ? file_create_url($tmp->field_image['und'][0]['uri']) : false;
         $sp5 = $image ? 'span8' : 'span12';
-        $url = url($base_url . '/taxonomy/term/' . $tmp->tid);
+        $url = drupal_get_path_alias('taxonomy/term/' . $tmp->tid);
         //$url = str_replace('communities/', '', $url);
         drupal_set_message($url);
         $address = $tmp->field_community_address['und'][0];
