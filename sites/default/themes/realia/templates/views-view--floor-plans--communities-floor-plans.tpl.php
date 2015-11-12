@@ -25,6 +25,8 @@
     <div class="communities-content">
       <?php
       $flrs = $view->result;
+      $arg = arg();
+      $comm = (isset($arg[2]) && is_numeric($arg[2]) && $arg[0] == 'taxonomy' && $arg[1] == 'term') ? taxonomy_term_load($arg[2]) : null;
       foreach ($flrs as $flr) {
         $tmp = $flr->_field_data['tid']['entity'];
         $image = file_create_url($tmp->field_image['und'][0]['uri']);
@@ -50,6 +52,28 @@
                 <div class="spirit"><span>Garage :&nbsp;</span><?php echo $gar->name; ?></div>
                 <div class="spirit bathroom"><?php echo $tmp->field_bathrooms['und'][0]['value']; ?></div>
                 <div class="spirit bedroom"><?php echo $tmp->field_bedrooms['und'][0]['value']; ?></div>
+                <?php if (!empty($comm) && $comm->vocabulary_machine_name == 'communities'): ?>
+                  <?php $floorFeatures = $tmp->field_floor_plan_slideshow['und']; ?>
+                  <?php if (!empty($floorFeatures)): ?>
+                    <h4>Floor Plan Slideshow</h4>
+                    <ul class="taxonomy-term-features pikachoose-floor-plans">
+                      <?php foreach ($floorFeatures as $feature) { ?>
+                        <?php $img = (array) file_load($feature['fid']); ?>
+                        <li class="span2 text-center">
+                          <img src="<?php print file_create_url($img['uri']); ?>" title="<?php print $img['title']; ?>" />
+                        </li>
+                      <?php } ?>
+                    </ul>
+                    <?php
+                  endif;
+                  $script = '(function($){ $(document).ready(function(){ demo1 = $(".pikachoose-floor-plans").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
+  }); })(jQuery);';
+                  $path = drupal_get_path('module', 'pikachoose_slider');
+                  drupal_add_js($path . '/js/slippry.min.js');
+                  drupal_add_css($path . '/css/slippry.css');
+                  drupal_add_js($script, array('type' => 'inline'));
+                endif;
+                ?>
               </div>
             </div>
           </div>
