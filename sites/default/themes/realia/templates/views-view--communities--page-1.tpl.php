@@ -31,8 +31,11 @@
         $image = !empty($tmp->field_image['und'][0]['uri']) ? file_create_url($tmp->field_image['und'][0]['uri']) : false;
         $sp5 = $image ? 'span8' : 'span12';
         $url = drupal_lookup_path('alias', 'taxonomy/term/' . $tmp->tid);
+        //$url = str_replace('communities/', '', $url);
+        drupal_set_message($url);
         $address = $tmp->field_community_address['und'][0];
         $agent = node_load($tmp->field_agent['und'][0]['nid']);
+        //$agent = str_replace('communities/', '', $agent);
         $price_range = taxonomy_term_load($tmp->field_price_range['und'][0]['tid']);
         ?>
         <div class="views-field">
@@ -47,6 +50,7 @@
                 <div>
                   <div class="row title-price">
                     <div class="title">
+                    <?php dpm($comm);?>
                       <a href="<?php echo $url; ?>"><?php echo $tmp->name; ?></a>
                     </div>
                   </div>

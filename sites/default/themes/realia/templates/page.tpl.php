@@ -95,8 +95,9 @@
             </div>
         </div>
         <?php if (!empty($page['map'])): ?>
-        <?php print render($page['map']); ?>
+        <?php //print render($page['map']); ?>
         <?php endif; ?>
+<div id="MyGmaps" style="width: 100%; height: 480px; border: 1px solid #CECECE;">&nbsp;</div>
     </div>
 
     <div id="content">
