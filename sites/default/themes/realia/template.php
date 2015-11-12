@@ -500,6 +500,9 @@ function realia_preprocess_html(&$variables) {
     $prefix = FALSE;
   }
 
+drupal_add_js(drupal_get_path('theme', 'realia') .'/libraries/maplabel.js', 'file');
+
+
   drupal_add_js(
           array(
       'theme' =>
@@ -854,11 +857,4 @@ function realia_radio(&$variables) {
   _form_set_class($element, array('form-radio'));
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
-}
-
-// loadmap for few pages
-$arg = arg();
-if (empty($arg[0]) && $arg(1) == 'communities') {
-  $script = '(function($){ $(document).ready(function(){ LoadGmaps(); }); })(jQuery);';
-  drupal_add_js($script, array('type' => 'inline'));
 }

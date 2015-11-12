@@ -19,8 +19,8 @@
     });
     //inits and creates lightbox effects for images
 
-    // call this function from a php file to control the view pages -> template.php
-    // LoadGmaps();
+    LoadGmaps();
+
   });
 
   function LoadGmaps() {
