@@ -97,6 +97,7 @@ Drupal.behaviors.contentTrim = {
 Drupal.behaviors.featuresImage = {
   attach: function (context, settings) {
     jQuery(context).on('click', '.taxonomy-term .taxonomy-term-features img', function () { // .featuresImage
+      var e = jQuery(this);
       var _body = jQuery('body');
       var _mask = jQuery('<div>').addClass('featured-mask');
       var _prev = jQuery('<div>').addClass('featured-prev nav');
@@ -106,7 +107,7 @@ Drupal.behaviors.featuresImage = {
       var _vUl = Array();
       var _tUl = Array();
       var _pointer = 0;
-      jQuery(".taxonomy-term .taxonomy-term-features img").each(function () {
+      e.closest(".taxonomy-term-features").each(function () {
         _vUl.push(this.src);
         _tUl.push(this.title);
       });
