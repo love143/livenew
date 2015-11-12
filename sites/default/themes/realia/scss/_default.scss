@@ -663,10 +663,10 @@ body.header-dark {
           }
         }
         .bedroom {
-          background-image: url("../img/icons/bedrooms.png"); background-size: 21px 12px; text-align: right; width: 31px;
+          background-image: url("../img/icons/bedrooms.png"); background-size: 21px 12px;
         }
         .bathroom {
-          background-image: url("../img/icons/bathrooms.png"); background-size: 14px 20px; text-align: right; width: 25px;
+          background-image: url("../img/icons/bathrooms.png"); background-size: 14px 20px;
         }
       }
     }
@@ -959,9 +959,11 @@ article.taxonomy-term {
     background-color: $gray-medium !important;
   }
 }
-.field-type-taxonomy-term-reference{
+
+.field-name-field-location{
   display: none;
 }
+
 .view-top-4 {
   .span9 {
     .span2 {
