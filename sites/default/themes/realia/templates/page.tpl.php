@@ -97,42 +97,39 @@
         <?php if (!empty($page['map'])): ?>
           <?php //print render($page['map']); ?>
         <?php endif; ?>
-        <?php $arg = arg();
-        echo '<pre>';
-        print_r($arg);
-        echo '</pre>'; ?>
-<?php if (empty($arg) || empty($arg[0]) || (isset($arg[1]) && $arg[1] == 'communities')): ?>
+        <?php $arg = arg(); ?>
+        <?php if (empty($arg[0]) || (isset($arg[0]) && in_array($arg[0], array('communities', 'apartments')))): ?>
           <div id="MyGmaps" style="width: 100%; height: 480px; border: 1px solid #CECECE;">&nbsp;</div>
-<?php endif; ?>
+        <?php endif; ?>
       </div>
 
       <div id="content">
         <div class="container">
           <?php if (!empty($page['below_map'])): ?>
-  <?php print render($page['below_map']); ?>
-              <?php endif; ?>
-              <?php if ($page['highlighted']): ?>
+            <?php print render($page['below_map']); ?>
+          <?php endif; ?>
+          <?php if ($page['highlighted']): ?>
             <div class="row" id="highlighted">
               <div class="span9">
-  <?php if ($page['highlighted']): ?>
+                <?php if ($page['highlighted']): ?>
                   <div class="highlighted"><?php print render($page['highlighted']); ?></div>
                 <?php endif; ?>
               </div>
 
               <div class="span3">
-  <?php if ($page['highlighted_sidebar']): ?>
-              <?php print render($page['highlighted_sidebar']); ?>
-            <?php endif; ?>
+                <?php if ($page['highlighted_sidebar']): ?>
+                  <?php print render($page['highlighted_sidebar']); ?>
+                <?php endif; ?>
               </div>
             </div><!-- /#highlighted -->
-            <?php endif; ?>
+          <?php endif; ?>
 
           <div class="row">
             <?php if ($page['sidebar_first']): ?>
               <div class="sidebar span3" role="complementary">
-  <?php print render($page['sidebar_first']); ?>
+                <?php print render($page['sidebar_first']); ?>
               </div> <!-- /.sidebar -->
-<?php endif; ?>
+            <?php endif; ?>
 
             <section class="<?php print _bootstrap_content_span($columns); ?>">
 
@@ -158,41 +155,41 @@
                 <ul class="action-links"><?php print render($action_links); ?></ul>
               <?php endif; ?>
               <?php print render($page['content']); ?>
-<?php if ($page['content_bottom']): ?>
-              <?php print render($page['content_bottom']); ?>
-            <?php endif; ?>
+              <?php if ($page['content_bottom']): ?>
+                <?php print render($page['content_bottom']); ?>
+              <?php endif; ?>
             </section>
 
             <?php if ($page['sidebar_second']): ?>
               <aside class="span3" role="complementary">
-  <?php print render($page['sidebar_second']); ?>
+                <?php print render($page['sidebar_second']); ?>
               </aside>  <!-- /#sidebar-second -->
             <?php endif; ?>
           </div>
           <div class="row" id="carousel">
             <?php if ($page['carousel']): ?>
               <div class="sidebar span12" role="complementary">
-  <?php print render($page['carousel']); ?>
+                <?php print render($page['carousel']); ?>
               </div> <!-- /.sidebar -->
-          <?php endif; ?>
+            <?php endif; ?>
           </div>
 
-              <?php if ($page['bottom']): ?>
+          <?php if ($page['bottom']): ?>
             <div class="row" id="bottom">
               <div class="span12">
-            <?php print render($page['bottom']); ?>
+                <?php print render($page['bottom']); ?>
               </div>
             </div>
-        <?php endif; ?>
+          <?php endif; ?>
         </div>
         <!-- /.container -->
 
-<?php if ($page['triptych_bottom']): ?>
+        <?php if ($page['triptych_bottom']): ?>
           <div class="triptych-wrapper">
             <div class="triptych">
               <div class="container">
                 <div class="row">
-  <?php print drupal_render($page['triptych_bottom']); ?>
+                  <?php print drupal_render($page['triptych_bottom']); ?>
                 </div>
                 <!-- /.row -->
               </div>
@@ -200,7 +197,7 @@
             </div>
             <!-- /.triptych -->
           </div><!-- /.triptych-wrapper -->
-<?php endif; ?>
+        <?php endif; ?>
       </div>
       <!-- /#content -->
     </div>
@@ -212,27 +209,27 @@
           <div class="row">
             <?php if ($page['bottom_quadruple_first']): ?>
               <div class="span3" role="complementary">
-              <?php print render($page['bottom_quadruple_first']); ?>
+                <?php print render($page['bottom_quadruple_first']); ?>
               </div><!-- /.span3 -->
-              <?php endif; ?>
+            <?php endif; ?>
 
             <?php if ($page['bottom_quadruple_second']): ?>
               <div class="sidebar span3" role="complementary">
-              <?php print render($page['bottom_quadruple_second']); ?>
+                <?php print render($page['bottom_quadruple_second']); ?>
               </div><!-- /.span3 -->
-              <?php endif; ?>
+            <?php endif; ?>
 
             <?php if ($page['bottom_quadruple_third']): ?>
               <div class="span3" role="complementary">
-              <?php print render($page['bottom_quadruple_third']); ?>
+                <?php print render($page['bottom_quadruple_third']); ?>
               </div><!-- /.span3 -->
-              <?php endif; ?>
+            <?php endif; ?>
 
             <?php if ($page['bottom_quadruple_last']): ?>
               <div class="span3" role="complementary">
-  <?php print render($page['bottom_quadruple_last']); ?>
+                <?php print render($page['bottom_quadruple_last']); ?>
               </div><!-- /.span3 -->
-<?php endif; ?>
+            <?php endif; ?>
           </div>
         </div>
         <!-- /#footer-top-inner -->
@@ -243,12 +240,12 @@
         <div id="footer-inner">
           <div class="row">
             <div class="span6 copyright">
-<?php print render($page['footer']); ?>
+              <?php print render($page['footer']); ?>
             </div>
             <!-- /.span6 -->
 
             <div class="span6 share">
-<?php print render($page['footer_secondary']); ?>
+              <?php print render($page['footer_secondary']); ?>
             </div>
             <!-- /.span6 -->
           </div>
