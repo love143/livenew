@@ -663,10 +663,10 @@ body.header-dark {
           }
         }
         .bedroom {
-          background-image: url("../img/icons/bedrooms.png"); background-size: 21px 12px;
+          background-image: url("../img/icons/bedrooms.png"); background-size: 21px 12px; text-align: right; width: 31px;
         }
         .bathroom {
-          background-image: url("../img/icons/bathrooms.png"); background-size: 14px 20px;
+          background-image: url("../img/icons/bathrooms.png"); background-size: 14px 20px; text-align: right; width: 25px;
         }
       }
     }
