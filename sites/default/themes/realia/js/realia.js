@@ -201,7 +201,7 @@ Drupal.behaviors.featuresImage = {
       var _vUl = Array();
       var _tUl = Array();
       var _pointer = 0;
-      e.closest(".taxonomy-term-features").each(function () {
+      e.closest(".taxonomy-term-features").find('img').each(function () {
         _vUl.push(this.src);
         _tUl.push(this.title);
       });
