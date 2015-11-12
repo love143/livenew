@@ -1,3 +1,97 @@
+(function ($, Drupal, window, document, undefined) {
+  $(document).ready(function () {
+    //Global Variable
+    var initValue;
+
+    //Executables
+    // removes and replaces text in input fields when clicked
+    $('input').blur(function () {
+      if ($(this).attr('value').length == 0) {
+        $(this).attr('value', initValue);
+      }
+      initValue = '';
+    });
+    $('input:not(input[type="button"], input[type="reset"], input[type="submit"])').focus(function () {
+      if ($(this).attr('value').length > 0) {
+        initValue = $(this).attr("value");
+        $(this).attr('value', '');
+      }
+    });
+    //inits and creates lightbox effects for images
+
+    LoadGmaps();
+
+  });
+
+  function LoadGmaps() {
+
+
+
+    var myOptions = {
+      zoom: 1,
+      disableDefaultUI: false,
+      panControl: false,
+      scrollwheel: false,
+      zoomControl: false,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.DEFAULT
+      },
+      mapTypeControl: false,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+      },
+      streetViewControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+
+    var map = new google.maps.Map(document.getElementById("MyGmaps"), myOptions);
+    google.maps.event.addDomListener(window, "resize", function () {
+      var center = map.getCenter();
+      google.maps.event.trigger(map, "resize");
+      map.setCenter(center);
+    });
+
+    var ctaLayer = new google.maps.KmlLayer({
+      url: 'http://livenew.baystreetdev.com/sites/default/themes/realia/libraries/countiestest1.kml',
+      map: map
+    });
+
+
+    var labels = [
+      {label: "York", lat: "34.992597", long: "-81.243896"},
+      {label: "Gaston", lat: "35.281921", long: "-81.192398"},
+      {label: "Mecklenburg", lat: "35.227322", long: "-80.841522"},
+      {label: "Union", lat: "34.970797", long: "-80.509186"},
+      {label: "Cabarrus", lat: "35.372465", long: "-80.549011"},
+      {label: "Iredell", lat: "35.774581", long: "-80.888214"},
+    ];
+
+
+    labels.forEach(function (entry) {
+      console.log(entry);
+      var mapLabel = new MapLabel({
+        text: entry["label"],
+        position: new google.maps.LatLng(entry["lat"], entry["long"]),
+        map: map,
+        fontSize: 13,
+        align: 'center',
+        zIndex: 222,
+      });
+
+    });
+    map.setZoom(8);
+
+  }
+
+
+// do not put any code between these two lines
+})(jQuery, Drupal, this, this.document);
+
+
+
+
+
 Drupal.behaviors.languageSwitch = {
   attach: function (context, settings) {
     var languageSwitch = jQuery('#block-realia-blocks-realia-language', context);
