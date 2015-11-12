@@ -5252,6 +5252,10 @@ body.header-dark #header-inner .site-email a {
   margin-top: 10px;
 }
 
+ul[class^='pikachoose-floor-plans-'] li {
+  text-align: center !important;
+}
+
 /* line 640, ../scss/_default.scss */
 .communities-content .views-field {
   background-color: #FFFFFF;

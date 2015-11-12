@@ -636,6 +636,11 @@ body.header-dark {
     }
   }
 }
+ul[class^='pikachoose-floor-plans-'] {
+  li {
+    text-align: center !important;
+  }
+}
 .communities-content {
   .views-field {
     background-color: $white; padding: 15px; margin: 10px 0px;

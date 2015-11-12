@@ -59,7 +59,7 @@
                     <ul class="taxonomy-term-features pikachoose-floor-plans-<?php echo $tmp->tid; ?>">
                       <?php foreach ($floorFeatures as $feature) { ?>
                         <?php $img = (array) file_load($feature['fid']); ?>
-                        <li class="span2 text-center">
+                        <li class="">
                           <img src="<?php print file_create_url($img['uri']); ?>" title="<?php print $img['title']; ?>" />
                         </li>
                       <?php } ?>
