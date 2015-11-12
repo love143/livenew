@@ -500,7 +500,7 @@ function realia_preprocess_html(&$variables) {
     $prefix = FALSE;
   }
 
-drupal_add_js(drupal_get_path('theme', 'realia') .'/libraries/maplabel.js', 'file');
+  drupal_add_js(drupal_get_path('theme', 'realia') . '/libraries/maplabel.js', 'file');
 
 
   drupal_add_js(

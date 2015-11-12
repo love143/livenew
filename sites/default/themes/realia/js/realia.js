@@ -19,8 +19,9 @@
     });
     //inits and creates lightbox effects for images
 
-    // loaded using template.php for better control over the pages to view
-    // LoadGmaps();
+    if (jQuery('#MyGmaps').length) {
+      LoadGmaps();
+    }
 
   });
 
