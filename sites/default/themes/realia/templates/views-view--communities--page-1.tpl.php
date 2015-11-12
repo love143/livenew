@@ -25,12 +25,13 @@
   <div class="row">
     <div class="communities-content span12">
       <?php
+      global $base_url;
       $comms = $view->result;
       foreach ($comms as $comm) {
         $tmp = $comm->_field_data['tid']['entity'];
         $image = !empty($tmp->field_image['und'][0]['uri']) ? file_create_url($tmp->field_image['und'][0]['uri']) : false;
         $sp5 = $image ? 'span8' : 'span12';
-        $url = drupal_get_path_alias('taxonomy/term/' . $tmp->tid);
+        $url = drupal_get_path_alias($base_url . '/taxonomy/term/' . $tmp->tid);
         //$url = str_replace('communities/', '', $url);
         drupal_set_message($url);
         $address = $tmp->field_community_address['und'][0];
