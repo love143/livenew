@@ -56,7 +56,7 @@
                   <?php $floorFeatures = $tmp->field_floor_plan_slideshow['und']; ?>
                   <?php if (!empty($floorFeatures)): ?>
                     <h4>Floor Plan Slideshow</h4>
-                    <ul class="taxonomy-term-features pikachoose-floor-plans">
+                    <ul class="taxonomy-term-features pikachoose-floor-plans-<?php echo $tmp->tid; ?>">
                       <?php foreach ($floorFeatures as $feature) { ?>
                         <?php $img = (array) file_load($feature['fid']); ?>
                         <li class="span2 text-center">
@@ -66,7 +66,7 @@
                     </ul>
                     <?php
                   endif;
-                  $script = '(function($){ $(document).ready(function(){ demo1 = $(".pikachoose-floor-plans").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
+                  $script = '(function($){ $(document).ready(function(){ demo1 = $(".pikachoose-floor-plans-' . $tmp->tid . '").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
   }); })(jQuery);';
                   $path = drupal_get_path('module', 'pikachoose_slider');
                   drupal_add_js($path . '/js/slippry.min.js');
