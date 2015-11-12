@@ -855,3 +855,10 @@ function realia_radio(&$variables) {
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
+
+// loadmap for few pages
+$arg = arg();
+if (empty($arg[0]) && $arg(1) == 'communities') {
+  $script = '(function($){ $(document).ready(function(){ LoadGmaps(); }); })(jQuery);';
+  drupal_add_js($script, array('type' => 'inline'));
+}
