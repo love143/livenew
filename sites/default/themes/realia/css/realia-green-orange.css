@@ -5252,7 +5252,7 @@ body.header-dark #header-inner .site-email a {
   margin-top: 10px;
 }
 
-ul[class^='pikachoose-floor-plans-'] li {
+ul.taxonomy-term-features li {
   text-align: center !important;
 }
 
@@ -5823,4 +5823,19 @@ a#btn-nav {
   .taxonomy-term-features .span2:nth-child(4n+1) {
     margin-left: 0px;
   }
+}
+.padlr30 {
+  padding: initial 30px;
+}
+.mrgb30 {
+  margin-bottom: 30px;
+}
+.mrgt30 {
+  margin-top: 30px;
+}
+.mrgb15 {
+  margin-bottom: 15px;
+}
+.mrgt15 {
+  margin-top: 15px;
 }

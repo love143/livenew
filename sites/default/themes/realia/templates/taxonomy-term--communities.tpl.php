@@ -29,15 +29,23 @@ print($messages);
         <div class="split-tabs" id="tab2"><h2>Community Features</h2>
           <?php $floorFeatures = $content['field_community_features']['#items']; ?>
           <?php if (!empty($floorFeatures)): ?>
-            <div class="span8 taxonomy-term-features">
+            <ul class="taxonomy-term-features pikachoose-communities-<?php echo $term->tid; ?>">
               <?php foreach ($floorFeatures as $feature) { ?>
                 <?php $img = (array) file_load($feature['item']['fid']); ?>
-                <div class="span3 text-center">
+                <li class="">
                   <img src="<?php print file_create_url($img['uri']); ?>" title="<?php print $img['title']; ?>" />
-                </div>
+                </li>
               <?php } ?>
-            </div>
-          <?php endif; ?>
+            </ul>
+            <?php
+            $script = '(function($){ $(document).ready(function(){ demo1 = $(".pikachoose-communities-' . $term->tid . '").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
+  }); })(jQuery);';
+            $path = drupal_get_path('module', 'pikachoose_slider');
+            drupal_add_js($path . '/js/slippry.min.js');
+            drupal_add_css($path . '/css/slippry.css');
+            drupal_add_js($script, array('type' => 'inline'));
+          endif;
+          ?>
         </div>
         <div class="split-tabs" id="tab3"><h2>Explore the Neighbourhood</h2><?php echo views_embed_view('communities_map', 'community_map_block', $term->tid); ?></div>
         <div class="split-tabs" id="tab4">
@@ -83,4 +91,3 @@ drupal_add_js("
 })(jQuery);
 ", "inline");
 drupal_add_js(drupal_get_path('theme', 'realia') . '/js/jquery.touchswipe.min.js', array('type' => 'file', 'scope' => 'footer'));
-?>
