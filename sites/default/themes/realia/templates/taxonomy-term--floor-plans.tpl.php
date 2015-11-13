@@ -32,7 +32,7 @@
         <div class="split-tabs" id="tab2"><h2>Floor Plans</h2><br>
           <?php $floorFeatures = $content['field_floor_plan_slideshow']['#items']; ?>
           <?php if (!empty($floorFeatures)): ?>
-            <ul class="taxonomy-term-features">
+            <ul class="taxonomy-term-features pikachoose-communities-<?php echo $term->tid; ?>">
               <?php foreach ($floorFeatures as $feature) { ?>
                 <?php $img = (array) file_load($feature['fid']); ?>
                 <li class="">
@@ -40,7 +40,15 @@
                 </li>
               <?php } ?>
             </ul>
-          <?php endif; ?>
+            <?php
+            $script = '(function($){ $(document).ready(function(){ demo1 = $(".pikachoose-communities-' . $term->tid . '").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
+  }); })(jQuery);';
+            $path = drupal_get_path('module', 'pikachoose_slider');
+            drupal_add_js($path . '/js/slippry.min.js');
+            drupal_add_css($path . '/css/slippry.css');
+            drupal_add_js($script, array('type' => 'inline'));
+          endif;
+          ?>
         </div>
         <div class="split-tabs mrgt15 mrgb15" id="tab3">
           <?php if (!empty($content['field_youtube_video'])): ?>
