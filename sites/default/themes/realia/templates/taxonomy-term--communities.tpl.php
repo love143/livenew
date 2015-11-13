@@ -19,9 +19,8 @@ print($messages);
         <div id="split-tabs">
           <label class="tabs active" href="tab1">Available Properties</label>
           <label class="tabs" href="tab2">Community Features</label>
-          <label class="tabs" href="tab4">Sales Office & Direction</label>
-          <label class="tabs" href="tab5">Floor Plans & Details</label>
-          <label class="tabs" href="tab3">Explore the Neighbourhood</label>
+          <label class="tabs" href="tab3">Sales Office & Direction</label>
+          <label class="tabs" href="tab4">Floor Plans & Details</label>
         </div>
       </div>
       <div class="span8 nmrg">
@@ -47,8 +46,9 @@ print($messages);
           endif;
           ?>
         </div>
-        <div class="split-tabs" id="tab3"><h2>Explore the Neighbourhood</h2><?php echo views_embed_view('communities_map', 'community_map_block', $term->tid); ?></div>
-        <div class="split-tabs" id="tab4">
+        <div class="split-tabs" id="tab3">
+          <h2>Explore the Neighbourhood</h2>
+          <?php echo views_embed_view('communities_map', 'community_map_block', $term->tid); ?>
           <h2>Sales Office & Direction</h2>
           <div class="span7">
             <?php $loc = $term->field_community_address['und'][0]; ?>
@@ -62,7 +62,7 @@ print($messages);
             </div>
           </div><!-- /.table -->
         </div>
-        <div class="split-tabs" id="tab5"><h2>Floor Plans &  Details</h2><?php echo views_embed_view('floor_plans', 'communities_floor_plans', $term->tid); ?></div>
+        <div class="split-tabs" id="tab4"><h2>Floor Plans &  Details</h2><?php echo views_embed_view('floor_plans', 'communities_floor_plans', $term->tid); ?></div>
       </div>
     </div>
   </div>
