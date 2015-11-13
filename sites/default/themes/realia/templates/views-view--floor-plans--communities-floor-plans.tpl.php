@@ -25,7 +25,7 @@
     <div class="communities-content">
       <?php
       $flrs = $view->result;
-      $arg = arg();
+      $arg = ''; //arg();
       $comm = (isset($arg[2]) && is_numeric($arg[2]) && $arg[0] == 'taxonomy' && $arg[1] == 'term') ? taxonomy_term_load($arg[2]) : null;
       foreach ($flrs as $flr) {
         $tmp = $flr->_field_data['tid']['entity'];

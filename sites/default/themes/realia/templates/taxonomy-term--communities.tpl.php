@@ -37,7 +37,7 @@ print($messages);
               <?php } ?>
             </ul>
             <?php
-            $script = '(function($){ $(document).ready(function(){ demo1 = $(".pikachoose-communities-' . $term->tid . '").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
+            $script = '(function($){ $(document).ready(function(){ var demo1 = $(".pikachoose-communities-' . $term->tid . '").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
   }); })(jQuery);';
             $path = drupal_get_path('module', 'pikachoose_slider');
             drupal_add_js($path . '/js/slippry.min.js');
@@ -80,11 +80,9 @@ drupal_add_js("
       $('#' + e.attr('href')).show();
     });
     var gmp = setInterval(function() {
-      console.log('try');
       if (gmaploadindi) {
         $('#split-tabs .tabs.active').trigger('click');
         clearInterval(gmp);
-        console.log('done');
       }
     }, 1000);
   });
