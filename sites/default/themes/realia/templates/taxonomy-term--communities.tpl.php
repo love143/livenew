@@ -43,8 +43,6 @@ print($messages);
           ?>
         </div>
         <div class="split-tabs" id="tab3">
-          <h2>Explore the Neighbourhood</h2>
-          <?php echo views_embed_view('communities_map', 'community_map_block', $term->tid); ?>
           <h2>Sales Office & Direction</h2>
           <div class="span7">
             <?php $loc = $term->field_community_address['und'][0]; ?>
@@ -57,6 +55,8 @@ print($messages);
               <a class="btn btn-success" target="_blank" href="http://maps.google.com?q=<?php echo $loc['latitude']; ?>+<?php echo $loc['longitude']; ?>">Get Direction</a>
             </div>
           </div><!-- /.table -->
+          <h2>Explore the Neighbourhood</h2>
+          <?php echo views_embed_view('communities_map', 'community_map_block', $term->tid); ?>
         </div>
         <div class="split-tabs" id="tab4"><h2>Floor Plans &  Details</h2><?php echo views_embed_view('floor_plans', 'communities_floor_plans', $term->tid); ?></div>
       </div>
