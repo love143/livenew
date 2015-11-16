@@ -22,7 +22,7 @@
     </div>
   <?php endif; ?>
   <div class="row">
-    <div class="communities-content span9">
+    <div class="communities-content span12">
       <?php
       $flrs = $view->result;
       foreach ($flrs as $flr) {
@@ -39,7 +39,7 @@
               <div class="span3">
                 <a href="<?php echo $url; ?>"><img typeof="foaf:Image" src="<?php echo $image; ?>" width="504" height="376" alt=""></a>
               </div>
-              <div class="span5">
+              <div class="span8">
                 <div class="row title-price">
                   <div class="title">
                     <a href="<?php echo $url; ?>"><?php echo $tmp->name; ?></a>
