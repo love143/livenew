@@ -858,3 +858,8 @@ function realia_radio(&$variables) {
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
+
+drupal_add_js(drupal_get_path('theme', 'realia') . '/js/jquery.touchswipe.min.js', array('type' => 'file', 'scope' => 'footer'));
+$path = drupal_get_path('theme', 'realia');
+drupal_add_js($path . '/sshow/ssscript.js');
+drupal_add_css($path . '/sshow/ssstyle.css');

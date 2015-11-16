@@ -66,11 +66,7 @@
                     </ul>
                     <?php
                   endif;
-                  $script = '(function($){ $(document).ready(function(){ demo1 = $(".pikachoose-floor-plans-' . $tmp->tid . '").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
-  }); })(jQuery);';
-                  $path = drupal_get_path('module', 'pikachoose_slider');
-                  drupal_add_js($path . '/js/slippry.min.js');
-                  drupal_add_css($path . '/css/slippry.css');
+                  $script = '(function($){ $(".pikachoose-communities-' . $term->tid . '").slideShow({cls:"taxonomy-term-features",parent: "#tab2"}); })(jQuery);';
                   drupal_add_js($script, array('type' => 'inline'));
                 endif;
                 ?>

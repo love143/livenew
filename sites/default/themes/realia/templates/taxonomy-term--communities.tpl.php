@@ -26,6 +26,7 @@ print($messages);
       <div class="span8 nmrg">
         <div class="split-tabs" id="tab1"><h2>Available Properties</h2><br><?php echo views_embed_view('related_nodes', 'block', $term->tid); ?></div>
         <div class="split-tabs" id="tab2"><h2>Community Features</h2>
+          <?php $script = ''; ?>
           <?php $floorFeatures = $content['field_community_features']['#items']; ?>
           <?php if (!empty($floorFeatures)): ?>
             <ul class="taxonomy-term-features pikachoose-communities-<?php echo $term->tid; ?>">
@@ -37,12 +38,7 @@ print($messages);
               <?php } ?>
             </ul>
             <?php
-            $script = '(function($){ $(document).ready(function(){ var demo1 = $(".pikachoose-communities-' . $term->tid . '").slippry({transition: "fade", speed: 1000, pause: 3000, auto: 1, pager: 0, preload: "visible", captions: 0, adaptiveHeight: 1 });
-  }); })(jQuery);';
-            $path = drupal_get_path('module', 'pikachoose_slider');
-            drupal_add_js($path . '/js/slippry.min.js');
-            drupal_add_css($path . '/css/slippry.css');
-            drupal_add_js($script, array('type' => 'inline'));
+            $script = '$(".pikachoose-communities-' . $term->tid . '").slideShow({cls:"taxonomy-term-features",parent: "#tab2"});';
           endif;
           ?>
         </div>
@@ -68,10 +64,10 @@ print($messages);
   </div>
 </article>
 <?php
-drupal_add_js(drupal_get_path('theme', 'realia') . '/js/jquery.touchswipe.min.js', array('type' => 'file', 'scope' => 'footer'));
 drupal_add_js("
 (function($){
   $(document).ready(function(){
+    $script
     $('#split-tabs .tabs').click(function(){
       var e = $(this);
       $('.split-tabs').hide()
@@ -88,4 +84,3 @@ drupal_add_js("
   });
 })(jQuery);
 ", "inline");
-drupal_add_js(drupal_get_path('theme', 'realia') . '/js/jquery.touchswipe.min.js', array('type' => 'file', 'scope' => 'footer'));
