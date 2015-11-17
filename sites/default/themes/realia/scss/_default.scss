@@ -1092,8 +1092,10 @@ a#btn-nav {
 .mrgt15 {
   margin-top: 15px;
 }
-#webform-client-form-9 label {
-  color: #65a700;
+form.webform-client-form {
+  label {
+    color: $blue !important;
+  }
 }
 .views-exposed-form {
   .views-exposed-widgets {
