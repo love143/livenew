@@ -3,7 +3,8 @@
   a {
     color: $blue;
     &:hover {
-      color: darken($blue, 10%);
+      color: darken($blue, 3%);
+      text-decoration: none;
     }
   }
   #footer-top {

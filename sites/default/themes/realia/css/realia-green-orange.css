@@ -3674,7 +3674,8 @@ body.node-type-apartment section .block-views {
 }
 /* line 5, ../scss/_footer.scss */
 #footer-wrapper a:hover {
-  color: #467400;
+  color: #5c9800;
+  text-decoration: none;
 }
 /* line 9, ../scss/_footer.scss */
 #footer-wrapper #footer-top {
