@@ -194,3 +194,12 @@ function template_preprocess_realia_view_gmap(&$variables) {
   drupal_add_js(drupal_get_path('module', 'realia_utils') . '/infobox.js');
   drupal_add_js(drupal_get_path('module', 'realia_utils') . '/styledMarker.js');
 }
+
+function realia_utils_views_pre_render(&$view) {
+  if ($view->name == 'agent' && $view->current_display == 'page_1') {
+    $arg = arg();
+    if(isset($arg[2]) && !empty($arg[2]) && $arg[2] != 'all') {
+      $view->build_info['title'] = ucwords($view->build_info['title'] . ' - ' . $arg[2]);
+    }
+  }
+}
