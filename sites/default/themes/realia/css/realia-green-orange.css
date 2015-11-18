@@ -5856,7 +5856,7 @@ body.node-type-gallery article.node-gallery .field-name-field-image .field-item 
 }
 [class^="blog-item-"] {
   width: 100%;
-  margin: 10px 0px;
+  margin: 10px 0px 50px 0px;
 }
 [class^="blog-item-"] .blog-image {
   width: 100%;
