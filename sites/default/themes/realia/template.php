@@ -863,3 +863,4 @@ drupal_add_js(drupal_get_path('theme', 'realia') . '/js/jquery.touchswipe.min.js
 $path = drupal_get_path('theme', 'realia');
 drupal_add_js($path . '/sshow/ssscript.js');
 drupal_add_css($path . '/sshow/ssstyle.css');
+drupal_add_css($path . '/css/font-awesome.min.css');
