@@ -5861,6 +5861,9 @@ body.node-type-gallery article.node-gallery .field-name-field-image .field-item 
 [class^="blog-item-"] .blog-image {
   width: 100%;
 }
+[class^="blog-item-"] .blog-image img {
+  max-width: 500px;
+}
 [class^="blog-item-"] .blog-details {
   margin-top: 10px;
   width: 100%;
