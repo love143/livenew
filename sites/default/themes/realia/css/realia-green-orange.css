@@ -5865,7 +5865,7 @@ body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right {
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right h2 { margin-top: 0px; margin-bottom: 10px; height: 40px; line-height: 40px; }
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right h2 a { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: block; }
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr { list-style: none; margin: 0px; padding: 0px; font-size: 11px; font-style: italic; }
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li { margin-right: 15px; float: left; height: 20px; line-height: 20px; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li { margin-right: 10px; float: left; height: 20px; line-height: 20px; }
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-comments-o, body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-chevron-circle-right { font-size: 12px; margin-right: 5px; }
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-circle { color: #707070; font-size: 6px; line-height: 14px; }
 @media screen and (max-width: 769px) { body.page-blog .span12 .span6 { padding: 0px 20px; } }
