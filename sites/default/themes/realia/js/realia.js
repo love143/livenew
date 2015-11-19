@@ -86,6 +86,20 @@
 
   }
 
+  // Blog width fixer for mobile view
+  $(document).ready(blogTitleFix);
+  $(window).resize(blogTitleFix);
+  function blogTitleFix() {
+    var w = $(window);
+    var e = $('body.page-blog .span12 .span6.blog-wrapper');
+    if (e.length) {
+      if (w.width() <= 769) {
+        e.find("[class^='blog-item-']").width(w.width() - (e.outerWidth(true) - e.width()));
+      } else {
+        e.find("[class^='blog-item-']").css('width', '100%');
+      }
+    }
+  }
 
 // do not put any code between these two lines
 })(jQuery, Drupal, this, this.document);

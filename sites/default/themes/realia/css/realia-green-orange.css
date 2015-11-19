@@ -5854,77 +5854,18 @@ form.webform-client-form label {
 body.node-type-gallery article.node-gallery .field-name-field-image .field-item {
   text-align: center;
 }
-[class^="blog-item-"] {
-  width: 100%;
-  margin: 10px 0px 50px 0px;
-}
-[class^="blog-item-"] .blog-image {
-  width: 100%;
-}
-[class^="blog-item-"] .blog-image img {
-  max-width: 500px;
-}
-[class^="blog-item-"] .blog-details {
-  margin-top: 10px;
-  width: 100%;
-  display: table;
-}
-[class^="blog-item-"] .blog-details .date-formater-left {
-  background-color: #65a700;
-  border-radius: 5px;
-  color: white;
-  float: left;
-  height: 70px;
-  max-width: 70px;
-  width: 18%;
-  margin-right: 1%;
-}
-[class^="blog-item-"] .blog-details .date-formater-left .day {
-  display: block;
-  font-size: 34px;
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  width: 100%;
-}
-[class^="blog-item-"] .blog-details .date-formater-left .month-year {
-  display: block;
-  font-size: 16px;
-  height: 25px;
-  line-height: 25px;
-  text-align: center;
-  width: 100%;
-}
-[class^="blog-item-"] .blog-details .title-right {
-  float: left;
-  width: 80%;
-}
-[class^="blog-item-"] .blog-details .title-right h2 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  height: 40px;
-  line-height: 40px;
-}
-[class^="blog-item-"] .blog-details .title-right ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  font-size: 11px;
-  font-style: italic;
-}
-[class^="blog-item-"] .blog-details .title-right ul li {
-  margin-right: 15px;
-  float: left;
-  height: 20px;
-  line-height: 20px;
-}
-[class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-comments-o,
-[class^="blog-item-"] .blog-details .title-right i.fa-chevron-circle-right {
-  font-size: 12px;
-  margin-right: 5px;
-}
-[class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-circle {
-  color: #8a8a8a;
-  font-size: 6px;
-  line-height: 14px;
-}
+body.page-blog .span12 .span6:nth-child(odd) { margin-left: 0px; }
+body.page-blog .span12 .span6 [class^="blog-item-"] { width: 100%; margin: 10px 0px 50px 0px; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-image { width: 100%; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details { margin-top: 10px; width: calc(100%); }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater-left { background-color: #65A700; border-radius: 5px; color: white; float: left; height: 70px; width: 70px; margin-right: 10px; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater-left .day { display: block; font-size: 34px; height: 45px; line-height: 45px; text-align: center; width: 100%; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater-left .month-year { display: block; font-size: 15px; height: 25px; line-height: 25px; text-align: center; width: 100%; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right { float: left; width: calc(100% - 80px); }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right h2 { margin-top: 0px; margin-bottom: 10px; height: 40px; line-height: 40px; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right h2 a { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: block; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr { list-style: none; margin: 0px; padding: 0px; font-size: 11px; font-style: italic; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li { margin-right: 15px; float: left; height: 20px; line-height: 20px; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-comments-o, body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-chevron-circle-right { font-size: 12px; margin-right: 5px; }
+body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-circle { color: #707070; font-size: 6px; line-height: 14px; }
+@media screen and (max-width: 769px) { body.page-blog .span12 .span6 { padding: 0px 20px; } }
