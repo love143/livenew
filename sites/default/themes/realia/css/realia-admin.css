@@ -1,0 +1,7 @@
+//admin css designs
+body.admin-menu .node-form div > .form-wrapper {
+  margin: 10px 0 30px;
+}
+.dragdropfile-processed {
+  border: 10px solid #ddd !important;
+}
