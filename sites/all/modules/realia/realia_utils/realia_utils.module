@@ -206,7 +206,7 @@ function realia_utils_views_pre_render(&$view) {
 
 function realia_utils_preprocess_html(&$variables) {
   global $user;
-  if (in_array('Sales Agent', $user->roles)) {
+  if (array_intersect(array('sales agent', 'sales team'), $user->roles)) {
     $theme_path = drupal_get_path('theme', 'realia');
     drupal_add_css($theme_path . 'css/realia-admin.css', array('weight' => CSS_THEME));
   }
