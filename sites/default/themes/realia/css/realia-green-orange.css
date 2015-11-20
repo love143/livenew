@@ -5868,4 +5868,26 @@ body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right u
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li { margin-right: 10px; float: left; height: 20px; line-height: 20px; }
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-comments-o, body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-chevron-circle-right { font-size: 12px; margin-right: 5px; }
 body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-circle { color: #707070; font-size: 6px; line-height: 14px; }
+body.node-type-apartment article[id^="node-"] {
+  padding: 0px;
+}
+body.node-type-apartment article[id^="node-"] .span8 .location {
+  padding: 0px 30px;
+}
+body.node-type-apartment article[id^="node-"] .span8 .location > .field {
+  margin: 5px;
+  display: inline-block;
+  width: 100%;
+}
+body.node-type-apartment article[id^="node-"] .span8 .split-tabs > .view,
+body.node-type-apartment article[id^="node-"] .span8 .split-tabs > .field,
+body.node-type-apartment article[id^="node-"] .span8 .split-tabs > .webform-client-form {
+  padding: 0px 30px;
+}
+body.node-type-apartment article[id^="node-"] .span8 .split-tabs > .webform-client-form select {
+  width: 100% !important;
+}
+body.node-type-apartment article[id^="node-"] .span8 .split-tabs > .webform-client-form .chzn-container .chzn-drop .chzn-search input {
+  width: 95% !important;
+}
 @media screen and (max-width: 769px) { body.page-blog .span12 .span6 { padding: 0px 20px; } }

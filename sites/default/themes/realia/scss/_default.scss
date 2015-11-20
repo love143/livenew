@@ -1201,7 +1201,35 @@ body.page-blog {
     }
   }
 }
-
+body.node-type-apartment article[id^="node-"] {
+  padding: 0px;
+  .span8 {
+    .location {
+      padding: 0px 30px;
+      & > .field {
+        margin: 5px;
+        display: inline-block;
+        width: 100%;
+      }
+      .split-tabs {
+        & > .view {
+          padding: 0px 30px;
+        }
+        & > .fields {
+          padding: 0px 30px;
+        }
+        & .webform-client-form {
+          select {
+            width: 100% !important;
+          }
+          .chzn-container .chzn-drop .chzn-search input {
+            width: 95% !important;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 769px) {
   body.page-blog {
     .span12 {
