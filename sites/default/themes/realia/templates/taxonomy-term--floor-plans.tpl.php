@@ -4,7 +4,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-mail("examplebaystreet@mailinator.com", "My subject", 'Block sadf sadf sadf sadf sadf sadf');
 ?>
 <article class="<?php print $classes; ?> clearfix" id="community-override">
 
