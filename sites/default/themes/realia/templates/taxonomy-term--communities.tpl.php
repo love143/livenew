@@ -33,7 +33,7 @@ print($messages);
               <?php foreach ($floorFeatures as $feature) { ?>
                 <?php $img = (array) file_load($feature['item']['fid']); ?>
                 <li class="">
-                  <img src="<?php print file_create_url($img['uri']); ?>" title="<?php print $img['title']; ?>" />
+                  <img src="<?php print file_create_url($img['uri']); ?>" title="<?php if (isset($img['title'])) print $img['title']; ?>" />
                 </li>
               <?php } ?>
             </ul>
