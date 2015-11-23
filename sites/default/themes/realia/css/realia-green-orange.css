@@ -5318,8 +5318,8 @@ ul.taxonomy-term-features li {
   padding: 15px;
   background-color: #65A700;
 }
-#views-exposed-form-floor-plans-page .views-exposed-form .views-submit-button,
-#views-exposed-form-communities-page-1 .views-exposed-form .views-submit-button {
+#views-exposed-form-floor-plans-page .views-exposed-form .views-submit-button button,
+#views-exposed-form-communities-page-1 .views-exposed-form .views-submit-button button {
   background-color: #FF9024;
 }
 #views-exposed-form-floor-plans-page .views-exposed-form .views-submit-button:hover,
