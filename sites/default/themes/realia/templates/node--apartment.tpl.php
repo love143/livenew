@@ -21,9 +21,10 @@
             </div>
           </div>
           <div class="span8 nmrg">
-          <div class="split-tabs" id="tabBody">
-            <?php print render($content['body']); ?>
-          </div>
+            <div class="split-tabs" id="tabBody">
+              <h2><?php print t('Description'); ?></h2>
+              <?php print render($content['body']); ?>
+            </div>
             <div class="split-tabs" id="tab1">
               <h2><?php print t('Overview'); ?></h2>
               <div class="location">
