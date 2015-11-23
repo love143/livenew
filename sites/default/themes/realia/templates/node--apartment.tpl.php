@@ -11,9 +11,11 @@
       <div class="container nmrg">
         <div class="row nmrg">
           <div class="span4 nmrg">
+            <h2><?php print t('Description'); ?></h2>
+            <?php print render($content['field_image']); ?>
+            <?php print render($content['body']); ?>
             <div id="split-tabs">
-              <label class="tabs active" href="tabBody">Description</label>
-              <label class="tabs" href="tab1">Overview</label>
+              <label class="tabs active" href="tab1">Overview</label>
               <label class="tabs" href="tab2">General Amenities</label>
               <!--              <label class="tabs" href="tab3">Neighbourhood Info</label>-->
               <label class="tabs" href="tab4">Assigned Agents</label>
@@ -21,10 +23,6 @@
             </div>
           </div>
           <div class="span8 nmrg">
-            <div class="split-tabs" id="tabBody">
-              <h2><?php print t('Description'); ?></h2>
-              <?php print render($content['body']); ?>
-            </div>
             <div class="split-tabs" id="tab1">
               <h2><?php print t('Overview'); ?></h2>
               <div class="location">
