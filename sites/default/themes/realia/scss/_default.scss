@@ -689,6 +689,12 @@ ul.taxonomy-term-features {
         .chzn-choices {
           min-height: 25px; padding: 6px;
         }
+        .view-submit-button {
+          background-color: $block-filter;
+          &:hover {
+            background-color: $block-filter-submit;
+          }
+        }
       }
     }
   }
