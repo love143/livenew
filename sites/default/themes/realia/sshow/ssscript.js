@@ -28,16 +28,7 @@ jQuery.fn.slideShow = function (options) {
     e.run;
   }
   e.init = function () {
-    e.prev.css({
-      left: e.container.offset().left,
-      top: e.container.offset().top,
-      height: e.container.height()
-    });
-    e.next.css({
-      left: e.container.offset().left + e.container.width() - e.next.width(),
-      top: e.container.offset().top,
-      height: e.container.height()
-    });
+    var e = this;
     e.wrap.css({
       height: e.opts.height,
       width: e.wrap.find('._ss_item').length * e.parwid
@@ -61,8 +52,7 @@ jQuery.fn.slideShow = function (options) {
   };
   e.init();
   e.par.on('show', function () {
-    console.log('hi');
-    setTimeout(e.init, 10);
+    setTimeout(e.init, 100);
   });
 };
 jQuery.each(['show', 'hide'], function (i, ev) {

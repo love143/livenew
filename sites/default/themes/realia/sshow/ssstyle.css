@@ -16,14 +16,14 @@
 ._ss_container {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 ._ss_nav {
   height: 100%;
-  left: 0;
   min-width: 70px;
   position: absolute;
   top: 0;
-  width: calc(10%);
+  width: 75px;
   background-image: url('arrows.svg');
   background-repeat: no-repeat;
   background-size: auto auto;
@@ -35,8 +35,10 @@
   opacity: 1;
 }
 ._ss_prev {
-  background-position: 57px center;
+  left: 0;
+  background-position: 20px center;
 }
 ._ss_next {
-  background-position: -43px center;
+  right: 0;
+  background-position: -40px center;
 }
