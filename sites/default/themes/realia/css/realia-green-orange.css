@@ -1927,7 +1927,7 @@ body.nav-open #aviators-palette {
   font-size: 16px;
   font-weight: medium;
   margin: 0px;
-  padding: 12px 0px;
+  padding: 12px;
   width: 100%;
 }
 /* line 60, ../scss/_filters.scss */

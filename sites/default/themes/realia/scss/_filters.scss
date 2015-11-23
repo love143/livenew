@@ -56,7 +56,7 @@
       .form-item-field-price-value-max { display: none; }
       .views-submit-button {
         clear: both; float: none; margin-top: 30px; padding: 0px;
-        button { @include background-image(none); @include transition(background-color .2s ease-in); background-color: lighten($block-filter, 4%); display: block; font-size: 16px; font-weight: medium; margin: 0px; padding: 12px 0px; width: 100%;
+        button { @include background-image(none); @include transition(background-color .2s ease-in); background-color: lighten($block-filter, 4%); display: block; font-size: 16px; font-weight: medium; margin: 0px; padding: 12px; width: 100%;
                  &:hover { background-color: darken($block-filter, 5%); }
         }
       }
