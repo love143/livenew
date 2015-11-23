@@ -1112,11 +1112,16 @@ form.webform-client-form {
     }
   }
 }
+
 body.node-type-gallery{
   article.node-gallery {
     .field-name-field-image  {
+      margin-bottom: 25px;
       .field-item {
         text-align: center;
+        img {
+          border: 15px solid $gray;
+        }
       }
     }
   }
