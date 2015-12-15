@@ -17,10 +17,10 @@ print($messages);
         <h5 class="sec-title">Priced From, &nbsp;<?php echo '$' . $price_range->min; ?>&nbsp;-&nbsp;<?php echo '$' . $price_range->max; ?></h5>
         <?php echo render($content['description']); ?>
         <div id="split-tabs">
-          <label class="tabs active" href="tab1">Available Properties</label>
+          <label class="tabs active" href="tab4">Floor Plans & Details</label>
+          <label class="tabs" href="tab1">Available Properties</label>
           <label class="tabs" href="tab2">Community Features</label>
           <label class="tabs" href="tab3">Sales Office & Direction</label>
-          <label class="tabs" href="tab4">Floor Plans & Details</label>
         </div>
       </div>
       <div class="span8 nmrg">

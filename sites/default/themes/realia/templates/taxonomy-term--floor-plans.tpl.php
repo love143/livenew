@@ -22,8 +22,8 @@
         </div><!-- /.overview -->
         <?php echo render($content['description']); ?>
         <div id="split-tabs">
-          <label class="tabs active" href="tab1">Available Properties</label>
-          <label class="tabs" href="tab2">Floor Plans</label>
+          <label class="tabs active" href="tab2">Floor Plans</label>
+          <label class="tabs" href="tab1">Available Properties</label>
           <label class="tabs" href="tab3">PDF Brochures & Video</label>
         </div>
       </div>
