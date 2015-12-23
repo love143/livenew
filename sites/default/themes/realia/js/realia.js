@@ -27,10 +27,8 @@
 
   function LoadGmaps() {
 
-
-
     var myOptions = {
-      zoom: 1,
+      zoom: 8,
       disableDefaultUI: false,
       panControl: false,
       scrollwheel: false,
@@ -43,46 +41,76 @@
         style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
       },
       streetViewControl: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: {lat: 35.227322, lng: -80.841522}
+    },
+    infoWindow = new google.maps.InfoWindow({
+      content: ""
+    }),
+    bounds = new google.maps.LatLngBounds();
 
+    var map = new google.maps.Map(document.getElementById('MyGmaps'), myOptions);
 
-    var map = new google.maps.Map(document.getElementById("MyGmaps"), myOptions);
     google.maps.event.addDomListener(window, "resize", function () {
       var center = map.getCenter();
       google.maps.event.trigger(map, "resize");
       map.setCenter(center);
     });
 
-    var ctaLayer = new google.maps.KmlLayer({
-      url: 'http://livenew.baystreetdev.com/sites/default/themes/realia/libraries/countiestest1.kml',
-      map: map
+    map.data.loadGeoJson('http://livenew.baystreetdev.com/sites/default/themes/realia/libraries/livewellcounties.json');
+    
+    map.data.setStyle(function(feature) {
+      var color = '#FF9A38';
+      if (feature.getProperty('isColorful')) {
+        color = '#65A700';
+      }
+      return /** @type {google.maps.Data.StyleOptions} */({
+        fillColor: color,
+        strokeColor: color,
+        strokeWeight: 2,
+        fillOpacity: .7
+      });
+    });   
+
+    map.data.addListener('click', function(event) {
+      map.setCenter();
+      infoWindow.setContent("<div class='mygmaps-info'><h3>"+event.feature.N.name+"</h3>"+event.feature.N.description+"</div>");
+      var anchor = new google.maps.MVCObject();
+      anchor.set("position",event.latLng);
+      infoWindow.open(map,anchor);
+    });
+    map.data.addListener('mouseover', function(event) {
+      map.data.revertStyle();
+      event.feature.setProperty('isColorful', true);
+      // map.data.overrideStyle(event.feature, {strokeWeight: 8});
+    });
+    map.data.addListener('mouseout', function(event) {
+      map.data.revertStyle();
+      event.feature.setProperty('isColorful', false);
     });
 
-
     var labels = [
-      {label: "York", lat: "34.992597", long: "-81.243896"},
-      {label: "Gaston", lat: "35.281921", long: "-81.192398"},
-      {label: "Mecklenburg", lat: "35.227322", long: "-80.841522"},
-      {label: "Union", lat: "34.970797", long: "-80.509186"},
-      {label: "Cabarrus", lat: "35.372465", long: "-80.549011"},
-      {label: "Iredell", lat: "35.774581", long: "-80.888214"},
+    {label: "York", lat: "34.992597", long: "-81.243896"},
+    {label: "Gaston", lat: "35.281921", long: "-81.192398"},
+    {label: "Mecklenburg", lat: "35.227322", long: "-80.841522"},
+    {label: "Union", lat: "34.970797", long: "-80.509186"},
+    {label: "Cabarrus", lat: "35.372465", long: "-80.549011"},
+    {label: "Iredell", lat: "35.774581", long: "-80.888214"},
     ];
 
-
     labels.forEach(function (entry) {
-      console.log(entry);
+
       var mapLabel = new MapLabel({
         text: entry["label"],
         position: new google.maps.LatLng(entry["lat"], entry["long"]),
         map: map,
         fontSize: 13,
         align: 'center',
-        zIndex: 222,
+        zIndex: 999,
       });
 
     });
-    map.setZoom(8);
+    return map;
 
   }
 
