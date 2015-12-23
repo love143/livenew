@@ -102,7 +102,7 @@
         $comm = (isset($arg[2]) && is_numeric($arg[2]) && $arg[0] == 'taxonomy' && $arg[1] == 'term') ? taxonomy_term_load($arg[2]) : null;
         if (empty($arg[0]) || (isset($arg[0]) && in_array($arg[0], array('communities', 'apartments'))) || (!empty($comm) && $comm->vocabulary_machine_name == 'communities')):
           ?>
-          <div id="MyGmaps" style="width: 100%; height: 480px; border: 1px 0px 1px 0px solid rgb(206, 206, 206); position: relative; background-color: rgb(229, 227, 223); overflow: hidden;">&nbsp;</div>
+          <div id="MyGmaps" style="width: 100%; height: 480px; border: 1px 0px 1px 0px solid rgb(206, 206, 206); position: relative; background-color: rgb(229, 227, 223);  overflow: hidden;">&nbsp;</div>
         <?php endif; ?>
       </div>
 
