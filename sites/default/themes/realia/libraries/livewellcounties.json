@@ -892,7 +892,7 @@
             },
             "properties": {
                 "name": "York County",
-                "description": "$200's - $300's<br><br>-Indian Trail<br>-Weddington<br>-Waxhaw<br><br><a href=\"/communities/york\">Communities</a>",
+                "description": "$200's - $300's<br><br>-Indian Trail<br>-Weddington<br>-Waxhaw<br><br>County Page: <a href=\"/communities/york\">Communities</a>",
                 "County Name": "York"
             }
         },
@@ -1747,7 +1747,7 @@
             },
             "properties": {
                 "name": "Union County",
-                "description": "$200's - $600's<br><br>-Indian Trail<br>-Weddington<br>-Waxhaw<br><br>County Name: Union",
+                "description": "$200's - $600's<br><br>-Indian Trail<br>-Weddington<br>-Waxhaw<br><br>County Page: <a href='http://livenew.baystreetdev.com/communities/union'>Union</a>",
                 "County Name": "Union"
             }
         },
@@ -2987,7 +2987,7 @@
             },
             "properties": {
                 "name": "Iredell County",
-                "description": "$200's - $350's<br><br>-Davidson<br>-Troutman<br>-Moorseville<br><br>County Name: Iredell",
+                "description": "$200's - $350's<br><br>-Davidson<br>-Troutman<br>-Mooresville<br><br>County Page: <a href='http://livenew.baystreetdev.com/communities/iredell'>Iredell</a>",
                 "County Name": "Iredell"
             }
         },
@@ -3547,7 +3547,7 @@
             },
             "properties": {
                 "name": "Gaston County",
-                "description": "$200's - $300's<br><br>-Mr. Holly<br>-Belmont<br><br>County Name: Gaston",
+                "description": "$200's - $300's<br><br>-Mt. Holly<br>-Belmont<br><br>County Page: <a href='http://livenew.baystreetdev.com/communities/gaston'>Gaston</a>",
                 "County Name": "Gaston"
             }
         },
@@ -4247,7 +4247,7 @@
             },
             "properties": {
                 "name": "Cabarrus County",
-                "description": "$180's - $300's<br><br>-Harrisburg<br>-Concord<br><br>County Name: Cabarrus",
+                "description": "$180's - $300's<br><br>-Harrisburg<br>-Concord<br><br>County Page: <a href='http://livenew.baystreetdev.com/communities/carbarrus'>Cabarrus</a>",
                 "County Name": "Cabarrus"
             }
         },
@@ -5232,7 +5232,7 @@
             },
             "properties": {
                 "name": "Mecklenburg County",
-                "description": "$200's - $500's<br><br>-Huntersville<br>-Conerlius<br>-University Area<br><br>County Name: Mecklenburg",
+                "description": "$200's - $500's<br><br>-Huntersville<br>-Cornelius<br>-University Area<br><br>County Page: <a href='http://livenew.baystreetdev.com/communities/Mecklenburg'>Mecklenburg</a>",
                 "County Name": "Mecklenburg"
             }
         }
