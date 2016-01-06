@@ -28,7 +28,7 @@
   function LoadGmaps() {
 
     var myOptions = {
-      zoom: 8,
+      zoom: 9,
       disableDefaultUI: false,
       panControl: false,
       scrollwheel: false,
@@ -57,8 +57,29 @@
       map.setCenter(center);
     });
 
-    map.data.loadGeoJson('http://livenew.baystreetdev.com/sites/default/themes/realia/libraries/livewellcounties.json');
-    
+    var url = 'http://livenew.lcl/sites/default/themes/realia/libraries/livewellcounties.json'
+    map.data.loadGeoJson(url);
+    $.ajax({
+      url: url,
+      dataType: 'JSON',
+      success: function(data) {
+        var lat = {}, lng = {};
+        $(data.features).each(function(key,feature) {
+          $(feature.geometry.coordinates[0]).each(function(key,val) {
+            lng['max'] = (!lng['max'] || Math.abs(lng['max']) > Math.abs(val[0])) ? val[0] : lng['max'];
+            lng['min'] = (!lng['min'] || Math.abs(lng['min']) < Math.abs(val[0])) ? val[0] : lng['min'];
+            lat['max'] = (!lat['max'] || Math.abs(lat['max']) > Math.abs(val[1])) ? val[1] : lat['max'];
+            lat['min'] = (!lat['min'] || Math.abs(lat['min']) < Math.abs(val[1])) ? val[1] : lat['min'];
+          });
+        });
+        var bounds = new google.maps.LatLngBounds();
+        bounds.extend(new google.maps.LatLng(lat.min - 0.01, lng.min - 0.01));
+        bounds.extend(new google.maps.LatLng(lat.max - 0.01, lng.max - 0.01));
+        map.fitBounds(bounds);
+        map.setCenter(bounds.getCenter());
+      }
+    });
+
     map.data.setStyle(function(feature) {
       var color = '#FF9A38';
       if (feature.getProperty('isColorful')) {
@@ -82,8 +103,8 @@
     map.data.addListener('mouseover', function(event) {
       map.data.revertStyle();
       event.feature.setProperty('isColorful', true);
-      // map.data.overrideStyle(event.feature, {strokeWeight: 8});
-    });
+          // map.data.overrideStyle(event.feature, {strokeWeight: 8});
+        });
     map.data.addListener('mouseout', function(event) {
       map.data.revertStyle();
       event.feature.setProperty('isColorful', false);
@@ -110,8 +131,6 @@
       });
 
     });
-    return map;
-
   }
 
   // Blog width fixer for mobile view
@@ -142,13 +161,13 @@ Drupal.behaviors.languageSwitch = {
     jQuery('.expand', languageSwitch).hide();
 
     languageSwitch.hover(
-            function () {
-              jQuery('.expand', languageSwitch).show();
-            },
-            function () {
-              jQuery('.expand', languageSwitch).hide();
-            }
-    );
+      function () {
+        jQuery('.expand', languageSwitch).show();
+      },
+      function () {
+        jQuery('.expand', languageSwitch).hide();
+      }
+      );
 
     var min = parseInt(jQuery('#edit-field-price-value-min').val());
     var max = parseInt(jQuery('#edit-field-price-value-max').val());
@@ -259,14 +278,14 @@ Drupal.behaviors.featuresImage = {
         var _key = e.which || e.keyCode;
         switch (_key) {
           case 27:
-            featuredClose();
-            break;
+          featuredClose();
+          break;
           case 37:
-            featuredPrev();
-            break;
+          featuredPrev();
+          break;
           case 39:
-            featuredNext();
-            break;
+          featuredNext();
+          break;
         }
       });
       jQuery('body').css({
@@ -309,5 +328,5 @@ Drupal.behaviors.featuresImage = {
       };
       addSwipeTo(".featured-wrap");
     });
-  }
+}
 };
