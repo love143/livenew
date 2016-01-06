@@ -57,7 +57,7 @@
       map.setCenter(center);
     });
 
-    var url = 'http://livenew.lcl/sites/default/themes/realia/libraries/livewellcounties.json'
+    var url = location.origin + '/sites/default/themes/realia/libraries/livewellcounties.json'
     map.data.loadGeoJson(url);
     $.ajax({
       url: url,
@@ -125,7 +125,7 @@
         text: entry["label"],
         position: new google.maps.LatLng(entry["lat"], entry["long"]),
         map: map,
-        fontSize: 13,
+        fontSize: 16,
         align: 'center',
         zIndex: 999,
       });
