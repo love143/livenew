@@ -87,7 +87,7 @@
       }
       return /** @type {google.maps.Data.StyleOptions} */({
         fillColor: color,
-        strokeColor: color,
+        strokeColor: '#FFFFFF',
         strokeWeight: 2,
         fillOpacity: .7
       });
