@@ -975,12 +975,13 @@ article.taxonomy-term .field-type-youtube { margin: 10px 0px; }
 #community-override > .container > .row > .span4 #split-tabs .tabs.active, #community-override > .container > .row > .span4 #split-tabs .tabs:hover { background-color: white; color: #65a700; -webkit-transition: font-size 0.1s ease-in; -moz-transition: font-size 0.1s ease-in; -o-transition: font-size 0.1s ease-in; transition: font-size 0.1s ease-in; font-size: 15px; -webkit-transition: padding-left 0.1s ease-in; -moz-transition: padding-left 0.1s ease-in; -o-transition: padding-left 0.1s ease-in; transition: padding-left 0.1s ease-in; padding-left: 18px; box-shadow: inset 1px 1px 1px 0px #65a700; }
 #community-override > .container > .row > .span8 > .split-tabs { overflow: hidden !important; }
 #community-override > .container > .row > .span8 > .split-tabs > h2 { margin: 10px 0px 10px 30px; }
-#community-override > .container > .row > .span8 > .split-tabs .view-related-nodes .span9 > .span3:nth-child(3n+1) { margin-left: 30px; }
+#community-override > .container > .row > .span8 > .split-tabs > h2 ~ div, #community-override > .container > .row > .span8 > .split-tabs > h2 ~ form { margin: 0px 30px; padding: 0px; width: calc(100% - 60px); }
 #community-override > .container > .row > .span8 > .split-tabs .taxonomy-term-features.span8 .span3 { max-height: 100px; overflow: hidden; }
-#community-override > .container > .row > .span8 .communities-content .views-field { padding: 15px 0px 15px 30px; margin: 0px; }
+#community-override > .container > .row > .span8 .communities-content .views-field { padding: 0px; margin: 0px; }
 #community-override > .container > .row > .span8 .row { margin: 0px; }
-#community-override > .container > .row > .span8 .row .span9 { margin: 0px; }
-#community-override > .container > .row > .span8 .row .span9 [class^="span"] { margin: 0px; }
+#community-override > .container > .row > .span8 .row > .span9 { margin: 0px; width: calc(100%); }
+#community-override > .container > .row > .span8 .row > .span9 > [class*="span"] { margin: 0 0 10px 0; width: calc(49%); }
+#community-override > .container > .row > .span8 .row > .span9 > [class*="span"]:nth-child(even) { margin-left: 2%; }
 
 .listing-grid.view .view-content .row .views-field-title .field-content { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 

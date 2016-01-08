@@ -33,52 +33,54 @@
           <?php $script = ''; ?>
           <?php $floorFeatures = $content['field_floor_plan_slideshow']['#items']; ?>
           <?php if (!empty($floorFeatures)): ?>
-            <ul class="taxonomy-term-features pikachoose-communities-<?php echo $term->tid; ?>">
-              <?php foreach ($floorFeatures as $feature) { ?>
+            <div class="pikachoose-communities-wrapper">
+              <ul class="taxonomy-term-features pikachoose-communities-<?php echo $term->tid; ?>">
+                <?php foreach ($floorFeatures as $feature) { ?>
                 <?php $img = (array) file_load($feature['fid']); ?>
                 <li class="">
                   <img src="<?php print file_create_url($img['uri']); ?>" title="<?php if (isset($img['title'])) print $img['title']; ?>" />
                 </li>
-              <?php } ?>
-            </ul>
+                <?php } ?>
+              </ul>
+            </div>
             <?php
-            $script = '$(".pikachoose-communities-' . $term->tid . '").slideShow({cls:"taxonomy-term-features",parent: "#tab2"});';
-          endif;
-          ?>
-        </div>
-        <div class="split-tabs mrgt15 mrgb15" id="tab3">
-          <?php if (!empty($content['field_youtube_video'])): ?>
-            <div class="padlr30">
-              <h2>Youtube Video</h2>
-              <?php print render($content['field_youtube_video']); ?>
-            </div>
-          <?php endif; ?>
-          <?php if (!empty($content['field_brochure_download'])): ?>
-            <div class="padlr30">
-              <h2>PDF Brochures</h2>
-              <?php print render($content['field_brochure_download']); ?>
-            </div>
-          <?php endif; ?>
+            $script = '$(".pikachoose-communities-' . $term->tid . '").slideShow({cls:"taxonomy-term-features",parent: ".pikachoose-communities-wrapper"});';
+            endif;
+            ?>
+          </div>
+          <div class="split-tabs mrgt15 mrgb15" id="tab3">
+            <?php if (!empty($content['field_youtube_video'])): ?>
+              <div class="padlr30">
+                <h2>Youtube Video</h2>
+                <?php print render($content['field_youtube_video']); ?>
+              </div>
+            <?php endif; ?>
+            <?php if (!empty($content['field_brochure_download'])): ?>
+              <div class="padlr30">
+                <h2>PDF Brochures</h2>
+                <?php print render($content['field_brochure_download']); ?>
+              </div>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-</article>
-<?php
-drupal_add_js("
-(function($){
-  $(document).ready(function(){
-    $script
-    $('.youtube-field-player').css({ height: '400px'});
-    $('#split-tabs .tabs').click(function(){
-      var e = $(this);
-      $('.split-tabs').hide()
-      $('#split-tabs .tabs').removeClass('active');
-      e.addClass('active');
-      $('#' + e.attr('href')).show();
-    });
-    $('#split-tabs .tabs.active').trigger('click');
-  });
+  </article>
+  <?php
+  drupal_add_js("
+    (function($){
+      $(document).ready(function(){
+        $script
+        $('.youtube-field-player').css({ height: '400px'});
+        $('#split-tabs .tabs').click(function(){
+          var e = $(this);
+          $('.split-tabs').hide()
+          $('#split-tabs .tabs').removeClass('active');
+          e.addClass('active');
+          $('#' + e.attr('href')).show();
+        });
+  $('#split-tabs .tabs.active').trigger('click');
+});
 })(jQuery);
-", "inline");
+  ", "inline");
