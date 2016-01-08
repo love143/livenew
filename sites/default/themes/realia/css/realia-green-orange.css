@@ -968,7 +968,8 @@ article.taxonomy-term .field-type-youtube { margin: 10px 0px; }
 #community-override h2 { margin-top: 0px; }
 #community-override .row > [class^=span]:first-child { margin-left: 0px; }
 #community-override > .container > .row > .span4 { background: #f0f0f0; padding: 15px 0px 15px 30px; box-shadow: inset -1px 0px 1px 0px #d5d5d5; }
-#community-override > .container > .row > .span4 .field-name-field-image { display: inline-block; float: left; }
+#community-override > .container > .row > .span4 .field-name-field-image { margin-bottom: 20px; }
+#community-override > .container > .row > .span4 .field-name-field-image .field-item { text-align: center; }
 #community-override > .container > .row > .span4 > * { padding-right: 15px; }
 #community-override > .container > .row > .span4 #split-tabs { padding-right: 0px; border-bottom: 1px solid #65a700; }
 #community-override > .container > .row > .span4 #split-tabs .tabs { height: 35px; line-height: 35px; padding-left: 20px; background-color: #65a700; color: white; margin: 0px; }

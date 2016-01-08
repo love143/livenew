@@ -3829,8 +3829,9 @@ article.taxonomy-term {
     padding: 15px 0px 15px 30px;
     box-shadow: inset -1px 0px 1px 0px #d5d5d5; }
     #community-override > .container > .row > .span4 .field-name-field-image {
-      display: inline-block;
-      float: left; }
+      margin-bottom: 20px; }
+      #community-override > .container > .row > .span4 .field-name-field-image .field-item {
+        text-align: center; }
     #community-override > .container > .row > .span4 > * {
       padding-right: 15px; }
     #community-override > .container > .row > .span4 #split-tabs {

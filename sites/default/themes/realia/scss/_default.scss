@@ -903,8 +903,10 @@ article.taxonomy-term {
       background: $gray-lighter; padding: 15px 0px 15px 30px;
       box-shadow: inset -1px 0px 1px 0px $gray-medium;
       .field-name-field-image {
-        display: inline-block;
-        float: left;
+        .field-item {
+          text-align: center;
+        }
+        margin-bottom: 20px;
       }
       > * {
         padding-right: 15px;
