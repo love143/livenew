@@ -914,9 +914,9 @@ article.taxonomy-term {
       #split-tabs {
         padding-right: 0px;
         .tabs {
-          height: 35px; line-height: 35px; padding-left: 20px; background-color: $blue-medium; color: $white; margin: 0px;
+          height: 35px; line-height: 35px; padding-left: 20px; background-color: $blue-medium; color: $white; margin: 0px; width: 75%;
           &.active, &:hover {
-            background-color: $white; color: $blue-medium; @include transition(font-size .1s ease-in); font-size: 15px; @include transition(padding-left .1s ease-in); padding-left: 18px; box-shadow: inset 1px 1px 1px 0px $blue-medium;
+            width: 100%; background-color: $white; color: $blue-medium; @include transition(font-size .1s ease-in); font-size: 15px; @include transition(padding-left .1s ease-in); padding-left: 18px; box-shadow: inset 1px 1px 1px 0px $blue-medium;
           }
         }
         border-bottom: 1px solid $blue-medium;
