@@ -3846,7 +3846,7 @@ article.taxonomy-term {
         margin: 0px;
         width: 75%; }
         #community-override > .container > .row > .span4 #split-tabs .tabs.active, #community-override > .container > .row > .span4 #split-tabs .tabs:hover {
-          width: 100%;
+          width: auto;
           background-color: white;
           color: #02344a;
           -webkit-transition: font-size 0.1s ease-in;
