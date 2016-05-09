@@ -49,7 +49,7 @@
 }
 
 .agent.content {
-  display: block;
+  display: inline-block;
   background-color: #FFF;
   padding: 15px;
   h2 {
@@ -58,19 +58,39 @@
   }
   .field.field-name-field-photo {
     display: inline-block;
-    float: left;
     margin-right: 10px;
-    margin-bottom: 5px;
-    min-width: 15%;
+    width: 140px;
     img {
-      width: 100%;
+      max-width: 100%;
     }
   }
   .field-name-body {
     display: inline;
   }
-  .field-name-field-phone, field-name-field-email, .field-name-field-employee-type {
+  .field-name-field-phone, .field-name-field-email, .field-name-field-employee-type {
     margin: 10px 0px;
+  }
+  .agent-content {
+    display: inline-block;
+    width: calc(100% - 150px);
+  }
+}
+
+@media (max-width: 568px) {
+  .agent.content {
+    .agent-photo {
+      width: 100%;
+      text-align: center;
+      margin-right: 0px;
+      margin-bottom: 10px;
+      .field.field-name-field-photo {
+        margin: 0px auto;
+        float: none;
+      }
+    }
+    .agent-content {
+      width: 100%;
+    }
   }
 }
 

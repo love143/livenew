@@ -46,7 +46,7 @@
                 </h2>
                 <div class="content truncate-dynamic"><?php echo $tmp->description; ?></div>
                 <div class="spirit"><span>Area :&nbsp;</span><?php echo $area->name; ?></div>
-                <div class="spirit"><span>level :&nbsp;</span><?php echo $lvl->name; ?></div>
+                <div class="spirit"><span>Floors :&nbsp;</span><?php echo $lvl->name; ?></div>
                 <div class="spirit"><span>Garage :&nbsp;</span><?php echo $gar->name; ?></div>
                 <div class="spirit bathroom"><?php echo $tmp->field_bathrooms['und'][0]['value']; ?></div>
                 <div class="spirit bedroom"><?php echo $tmp->field_bedrooms['und'][0]['value']; ?></div>

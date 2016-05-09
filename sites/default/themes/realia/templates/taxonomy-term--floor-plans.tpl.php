@@ -17,6 +17,7 @@
             <?php print render($content['field_bedrooms']); ?>
             <?php print render($content['field_square_foot']); ?>
             <?php print render($content['field_garage']); ?>
+            <?php print render($content['field_master_suite']); ?>
             <?php print render($content['field_levels']); ?>
           </div><!-- /.table -->
         </div><!-- /.overview -->

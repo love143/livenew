@@ -1,4 +1,5 @@
 <?php if ($page): ?>
+<?php dpm($node); ?>
 
   <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div id="community-override">
@@ -10,7 +11,7 @@
       <?php hide($content['field_general_amenities']); ?>
       <div class="container nmrg">
         <div class="row nmrg">
-          <div class="span4 nmrg">
+          <div class="span4 nmrg aprtment-nodes">
             <h2><?php print t('Description'); ?></h2>
             <?php print render($content['field_image']); ?>
             <?php print render($content['body']); ?>
@@ -36,6 +37,19 @@
                 <?php print render($content['field_community']); ?>
                 <?php print render($content['field_mls_']); ?>
                 <?php print render($content['field_floor_plans']); ?>
+                 <?php print render($content['field_elevation']); ?>
+                 <?php print render($content['field_master_suite']); ?>
+                  <?php print render($content['field_basement']); ?>
+                  <?php if($node->field_basement['und'][0]['tid'] == 258):?>
+                  <div class="field">
+                    <div class="field-label">Basement:</div>
+                    <div class="field-items">
+                      <div class="field-item">
+                        Yes                      </div>
+                    </div>
+                  </div>
+                  <?php endif; ?>
+                  <?php dpm($content); ?>
                 <?php $location = $content['locations']['#locations']; ?>
                 <?php $loc = $location[0]; ?>
                 <?php if ($loc['street']): ?>

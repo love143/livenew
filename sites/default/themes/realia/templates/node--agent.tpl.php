@@ -13,13 +13,16 @@
 <?php endif; ?>
 <?php if ($page): ?>
   <div class="agent content">
-    <?php print render($content['field_photo']); ?>
-    <h2><?php print $title; ?></h2>
-    <?php print render($content['body']); ?>
-    <?php print render($content['field_employee_type']); ?>
-    <?php print render($content['field_phone']); ?>
-    <?php print render($content['field_email']); ?>
-    <?php print render($content['field_communities']); ?>
-    <?php print render($content['field_office']); ?>
+    <div class="agent-photo pull-left"> <?php print render($content['field_photo']); ?></div>
+    <div class="agent-content pull-right">
+      <h2><?php print $title; ?></h2>
+      <?php print render($content['field_job_title']); ?>
+      <?php print render($content['field_employee_type']); ?>
+      <?php print render($content['field_phone']); ?>
+      <?php print render($content['field_email']); ?>
+      <?php print render($content['field_communities']); ?>
+      <?php print render($content['field_office']); ?>
+      <?php print render($content['body']); ?>
+    </div>
   </div>
 <?php endif; ?>

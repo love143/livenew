@@ -32,6 +32,7 @@
         $area = taxonomy_term_load($tmp->field_square_foot['und'][0]['tid']);
         $lvl = taxonomy_term_load($tmp->field_levels['und'][0]['tid']);
         $gar = taxonomy_term_load($tmp->field_garage['und'][0]['tid']);
+         $mas = taxonomy_term_load($tmp->field_master_suite['und'][0]['tid']);
         ?>
         <div class="views-field">
           <div class="field-content">
@@ -47,8 +48,11 @@
                 </div>
                 <div class="content"><?php echo $tmp->description; ?></div>
                 <div class="spirit"><span>Area :&nbsp;</span><?php echo $area->name; ?></div>
-                <div class="spirit"><span>level :&nbsp;</span><?php echo $lvl->name; ?></div>
+                <div class="spirit"><span>Floors :&nbsp;</span><?php echo $lvl->name; ?></div>               
                 <div class="spirit"><span>Garage :&nbsp;</span><?php echo $gar->name; ?></div>
+                <?php if($mas->name) { ?>
+                <div class="spirit"><span>Master Suite :&nbsp;</span><?php echo $mas->name; ?></div>
+                <?php } ?>
                 <div class="spirit bathroom"><?php echo $tmp->field_bathrooms['und'][0]['value']; ?></div>
                 <div class="spirit bedroom"><?php echo $tmp->field_bedrooms['und'][0]['value']; ?></div>
               </div>

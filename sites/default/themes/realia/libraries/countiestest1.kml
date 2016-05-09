@@ -8,7 +8,8 @@
 			<Placemark>
 				<name>York County</name>
 				<description><![CDATA[$200's - $300's<br><br>-Indian Trail<br>-Weddington<br>-Waxhaw<br><br><a href="/communities/york">Communities</a>]]></description>
-				<styleUrl>#poly-81BB31-1-127</styleUrl>
+				<styleUrlOld>#poly-81BB31-1-127</styleUrlOld>
+        <sylteUrl>#poly-D9852D-1-127</styleUrl>
 				<ExtendedData>
 					<Data name='County Name'>
 						<value>York</value>

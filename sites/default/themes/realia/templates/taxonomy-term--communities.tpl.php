@@ -14,7 +14,7 @@ print($messages);
   <div class="container nmrg">
     <div class="row nmrg">
       <div class="span4 nmrg">
-        <h5 class="sec-title">Priced From, &nbsp;<?php echo '$' . $price_range->min; ?>&nbsp;-&nbsp;<?php echo '$' . $price_range->max; ?></h5>
+        <h5 class="sec-title">Priced From, &nbsp;<?php echo '$ ' . number_format($price_range->min); ?>&nbsp;-&nbsp;<?php echo '$ ' . number_format($price_range->max); ?></h5>
         <?php echo render($content['description']); ?>
         <div id="split-tabs">
           <label class="tabs active" href="tab4">Floor Plans & Details</label>

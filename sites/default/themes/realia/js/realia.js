@@ -23,12 +23,26 @@
       LoadGmaps();
     }
 
+    function svgLivenew() {
+      if ($(".svg-livenew").length) {
+        if ($(window).width() < 768) {
+          $(".svg-livenew")[0].setAttribute("viewBox", "0 0 500 600");
+        } else {
+          $(".svg-livenew")[0].setAttribute("viewBox", "0 0 1000 600");
+        }
+      }
+    }
+
+    $(window).resize(svgLivenew);
+    svgLivenew();
+
   });
 
   function LoadGmaps() {
 
     var myOptions = {
       zoom: 9,
+      draggable: false,
       disableDefaultUI: false,
       panControl: false,
       scrollwheel: false,
@@ -150,10 +164,6 @@
 
 // do not put any code between these two lines
 })(jQuery, Drupal, this, this.document);
-
-
-
-
 
 Drupal.behaviors.languageSwitch = {
   attach: function (context, settings) {
@@ -328,5 +338,5 @@ Drupal.behaviors.featuresImage = {
       };
       addSwipeTo(".featured-wrap");
     });
-}
+  }
 };
