@@ -2093,7 +2093,7 @@ body.nav-open #aviators-palette {
   position: relative;
 }
 /* line 27, ../scss/_properties.scss */
-.view-apartments .item .views-field-field-image,
+/* .view-apartments .item .views-field-field-image, */
 .view-related-nodes .item .views-field-field-image {
   height: 169px;
   overflow: hidden;
@@ -2246,7 +2246,7 @@ body.nav-open #aviators-palette {
 
 @media (min-width: 1200px) {
   /* line 86, ../scss/_properties.scss */
-  .view-apartments .views-field-field-image,
+  /* .view-apartments .views-field-field-image, */
   .view-related-nodes .views-field-field-image {
     height: 205px;
   }
@@ -4120,7 +4120,8 @@ body.toolbar-drawer {
 }
 /* line 55, ../scss/_default.scss */
 body.toolbar-drawer #footer-wrapper {
-  margin-top: -65px;
+  /*margin-top: -65px; */
+  margin-top: 0px;
 }
 
 @media (min-width: 980px) {
@@ -5929,25 +5930,25 @@ body.node-type-gallery article.node-gallery .field-name-field-image .field-item 
 }
 
 /* line 1157, ../scss/_default.scss */
-body.page-blog .span12 .span6:nth-child(odd) {
-  margin-left: 0px;
+body.page-blog .span9 .span12:nth-child(odd) {
+   /*margin-left: 0px;*/
 }
 /* line 1160, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] {
+body.page-blog .span9 .span12 [class^="blog-item-"] {
   width: 100%;
   margin: 10px 0px 50px 0px;
 }
 /* line 1163, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-image {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-image {
   width: 100%;
 }
 /* line 1166, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details {
   margin-top: 10px;
   width: calc(100%);
 }
 /* line 1169, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater-left {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .date-formater-left {
   background-color: #06a7ea;
   border-radius: 5px;
   color: white;
@@ -5957,7 +5958,7 @@ body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater
   margin-right: 10px;
 }
 /* line 1177, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater-left .day {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .date-formater-left .day {
   display: block;
   font-size: 34px;
   height: 45px;
@@ -5966,7 +5967,7 @@ body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater
   width: 100%;
 }
 /* line 1185, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater-left .month-year {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .date-formater-left .month-year {
   display: block;
   font-size: 15px;
   height: 25px;
@@ -5975,26 +5976,26 @@ body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .date-formater
   width: 100%;
 }
 /* line 1194, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right {
   float: left;
   width: calc(100% - 80px);
 }
 /* line 1197, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right h2 {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right h2 {
   margin-top: 0px;
   margin-bottom: 10px;
   height: 40px;
   line-height: 40px;
 }
 /* line 1202, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right h2 a {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right h2 a {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   display: block;
 }
 /* line 1209, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right ul.subStr {
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -6002,20 +6003,20 @@ body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right u
   font-style: italic;
 }
 /* line 1215, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right ul.subStr li {
   margin-right: 10px;
   float: left;
   height: 20px;
   line-height: 20px;
 }
 /* line 1220, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-comments-o,
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-chevron-circle-right {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-comments-o,
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-chevron-circle-right {
   font-size: 12px;
   margin-right: 5px;
 }
 /* line 1225, ../scss/_default.scss */
-body.page-blog .span12 .span6 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-circle {
+body.page-blog .span9 .span12 [class^="blog-item-"] .blog-details .title-right ul.subStr li i.fa-circle {
   color: #707070;
   font-size: 6px;
   line-height: 14px;
@@ -6054,7 +6055,7 @@ body.node-type-apartment article[id^="node-"] .span8 .location .split-tabs .webf
 
 @media screen and (max-width: 769px) {
   /* line 1270, ../scss/_default.scss */
-  body.page-blog .span12 .span6 {
+  body.page-blog .span9 .span12 {
     padding: 0px 20px;
   }
 }

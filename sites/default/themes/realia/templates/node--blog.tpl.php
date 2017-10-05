@@ -12,7 +12,7 @@ if ($page) {
   $day = explode(',', $crt);
   $usr = user_load($uid);
   ?>
-  <div class="span6 blog-wrapper">
+  <div class="span12 blog-wrapper">
     <div class="blog-item-<?php echo $node->nid; ?> clearfix">
       <div class="blog-image">
         <?php print render($content['field_image']); ?>

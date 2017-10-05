@@ -53,8 +53,16 @@
                 <?php if($mas->name) { ?>
                 <div class="spirit"><span>Master Suite :&nbsp;</span><?php echo $mas->name; ?></div>
                 <?php } ?>
-                <div class="spirit bathroom"><?php echo $tmp->field_bathrooms['und'][0]['value']; ?></div>
-                <div class="spirit bedroom"><?php echo $tmp->field_bedrooms['und'][0]['value']; ?></div>
+                <?php 
+                  $bathroom = field_info_field('field_bathrooms');
+                  $bedrooms = field_info_field('field_bedrooms');
+                ?>
+
+                <!--  <div class="spirit bathroom"></div><span> <?php echo $tmp->field_bathrooms['und'][0]['value']; ?></span>
+                <div class="spirit bedroom"></div><span><?php echo $tmp->field_bedrooms['und'][0]['value']; ?></span> -->
+                <div class="spirit bathroom"></div><span><?php echo $bathroom['settings']['allowed_values'][$tmp->field_bathrooms['und'][0]['value']]; ?></span>
+                <div class="spirit bedroom"></div><span><?php echo $bedrooms['settings']['allowed_values'][$tmp->field_bedrooms['und'][0]['value']]; ?></span>
+
               </div>
             </div>
           </div>

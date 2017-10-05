@@ -19,7 +19,7 @@ print($messages);
         <div id="split-tabs">
           <label class="tabs active" href="tab4">Floor Plans & Details</label>
           <label class="tabs" href="tab1">Available Properties</label>
-          <label class="tabs" href="tab2">Community Features</label>
+          <label class="tabs" href="tab2">Community Features & Pricing</label>
           <label class="tabs" href="tab3">Sales Office & Direction</label>
         </div>
       </div>

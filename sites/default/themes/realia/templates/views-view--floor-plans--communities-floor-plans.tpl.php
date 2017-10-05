@@ -48,8 +48,12 @@
                 <div class="spirit"><span>Area :&nbsp;</span><?php echo $area->name; ?></div>
                 <div class="spirit"><span>Floors :&nbsp;</span><?php echo $lvl->name; ?></div>
                 <div class="spirit"><span>Garage :&nbsp;</span><?php echo $gar->name; ?></div>
-                <div class="spirit bathroom"><?php echo $tmp->field_bathrooms['und'][0]['value']; ?></div>
-                <div class="spirit bedroom"><?php echo $tmp->field_bedrooms['und'][0]['value']; ?></div>
+                <?php //dpm($tmp); ?>
+                <?php $bathroom = field_info_field('field_bathrooms');
+                  $bedrooms = field_info_field('field_bedrooms');
+                ?>
+                <div class="spirit bathroom"></div><span><?php echo $bathroom['settings']['allowed_values'][$tmp->field_bathrooms['und'][0]['value']]; ?></span>
+                <div class="spirit bedroom"></div><span><?php echo $bathroom['settings']['allowed_values'][$tmp->field_bedrooms['und'][0]['value']]; ?></span>
               </div>
             </div>
           </div>

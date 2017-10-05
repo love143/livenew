@@ -49,7 +49,6 @@
                 <div>
                   <div class="row title-price">
                     <div class="title">
-                      <?php dpm($comm); ?>
                       <a href="<?php echo $url; ?>"><?php echo $tmp->name; ?></a>
                     </div>
                   </div>

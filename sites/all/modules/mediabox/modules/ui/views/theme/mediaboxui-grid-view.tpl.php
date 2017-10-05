@@ -13,7 +13,7 @@
               <?php foreach ($rows as $delta => $row): ?>
                 <tr>
                   <?php foreach ($row as $record): ?>
-                    <td>
+                    <td>  <?php $record['id'] = str_replace(',', '' , $record['id']); ?>
                       <div id="<?php print $record['id']; ?>" class="mediabox-selectable">
                         <?php print $record['record']; ?>
                       </div>
